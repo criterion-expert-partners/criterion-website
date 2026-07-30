@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit your case to Criterion Expert Partners. Tell us what you need and we'll match you with a vetted, available expert witness within 24–48 hours.">
+  <title>Start an Expert Search | Criterion Expert Partners</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --abyss:    #080C18;
+      --navy:     #0B1E3D;
+      --steel:    #1B3460;
+      --platinum: #B4B9C8;
+      --arctic:   #38BDF8;
+      --white:    #F4F6FB;
+      --muted:    #5B6A88;
+      --border:   rgba(180,185,200,0.12);
+      --a-bg:     rgba(56,189,248,0.07);
+      --a-bd:     rgba(56,189,248,0.22);
+      --error:    #F87171;
+      --error-bg: rgba(248,113,113,0.08);
+      --nav-h:    68px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html  { scroll-behavior: smooth; }
+    body  { background: var(--abyss); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a     { text-decoration: none; color: inherit; }
+    button{ cursor: pointer; font-family: inherit; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+
+    .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--arctic); margin-bottom: 16px; }
+    .eyebrow::before { content: ''; width: 20px; height: 1.5px; background: var(--arctic); flex-shrink: 0; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); background: rgba(8,12,24,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; transition: box-shadow 0.3s; }
+    .nav.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.32); }
+    .nav-logo     { display: flex; align-items: center; gap: 14px; }
+    .nav-wordmark { display: flex; flex-direction: column; }
+    .nav-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 13px; color: var(--white); letter-spacing: 0.07em; line-height: 1; }
+    .nav-sub  { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 7px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--platinum); margin-top: 5px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-link { font-size: 13px; color: var(--platinum); font-weight: 400; transition: color 0.18s; position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--arctic); transition: width 0.2s; }
+    .nav-link:hover { color: var(--white); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; }
+    .nav-cta:hover { opacity: 0.88; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; }
+    .nav-toggle span { width: 22px; height: 1.5px; background: var(--platinum); display: block; transition: transform 0.28s, opacity 0.28s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* PAGE HERO */
+    .page-hero { padding: calc(var(--nav-h) + 48px) 0 48px; background: linear-gradient(160deg, var(--abyss) 0%, #0A1830 60%, var(--navy) 100%); border-bottom: 0.5px solid var(--steel); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 65%); top: -100px; right: -100px; pointer-events: none; }
+    .page-hero .container { position: relative; z-index: 1; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a { color: var(--muted); transition: color 0.18s; }
+    .breadcrumb a:hover { color: var(--platinum); }
+    .page-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(30px,4.5vw,50px); color: var(--white); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .page-hero p  { font-size: 15px; color: var(--platinum); line-height: 1.75; max-width: 560px; }
+
+    /* MAIN FORM AREA */
+    .form-area { padding: 72px 0 96px; }
+
+    .form-layout {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* FORM PANEL */
+    .form-panel {
+      background: rgba(11,30,61,0.3);
+      border: 1px solid var(--steel);
+      border-radius: 12px;
+      padding: 48px;
+    }
+
+    .form-panel-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .form-panel-sub {
+      font-size: 14px;
+      color: var(--platinum);
+      line-height: 1.6;
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    /* FORM FIELDS */
+    .form-section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--arctic);
+      margin-bottom: 20px;
+      padding-top: 4px;
+    }
+
+    .field-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+    .field-grid-1 { margin-bottom: 18px; }
+
+    .field { display: flex; flex-direction: column; }
+
+    .field label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 7px;
+      letter-spacing: 0.04em;
+    }
+
+    .field label .req {
+      color: var(--arctic);
+      margin-left: 2px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      background: rgba(8,12,24,0.6);
+      border: 1px solid var(--steel);
+      border-radius: 6px;
+      padding: 11px 14px;
+      font-size: 14px;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder { color: var(--muted); }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--arctic);
+      box-shadow: 0 0 0 3px rgba(56,189,248,0.12);
+    }
+
+    .field input.invalid,
+    .field select.invalid,
+    .field textarea.invalid {
+      border-color: var(--error);
+      box-shadow: 0 0 0 3px var(--error-bg);
+    }
+
+    .field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235B6A88' stroke-width='1.5' fill='none' stroke-linecap='square'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+
+    .field select option { background: #0B1E3D; color: var(--white); }
+
+    .field textarea { min-height: 110px; resize: vertical; line-height: 1.6; }
+
+    .field-hint {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 5px;
+      line-height: 1.45;
+    }
+
+    .field-error {
+      font-size: 11px;
+      color: var(--error);
+      margin-top: 5px;
+      display: none;
+    }
+
+    .form-divider {
+      height: 0.5px;
+      background: var(--border);
+      margin: 28px 0;
+    }
+
+    /* SUBMIT */
+    .form-submit-row { margin-top: 32px; }
+
+    .btn-submit {
+      width: 100%;
+      padding: 16px 24px;
+      background: var(--arctic);
+      color: var(--abyss);
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      cursor: pointer;
+      transition: opacity 0.18s, transform 0.18s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-submit:hover { opacity: 0.88; }
+    .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .form-legal {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .form-legal a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* FORM ERROR MESSAGE */
+    .form-error-msg {
+      display: none;
+      background: var(--error-bg);
+      border: 1px solid rgba(248,113,113,0.2);
+      border-radius: 6px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--error);
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    /* SUCCESS STATE */
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 64px 48px;
+    }
+
+    .success-icon {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--a-bg);
+      border: 2px solid var(--arctic);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+    }
+
+    .success-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .success-sub {
+      font-size: 15px;
+      color: var(--platinum);
+      line-height: 1.75;
+      max-width: 480px;
+      margin: 0 auto 36px;
+    }
+
+    .success-next { text-align: left; }
+
+    .success-next-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--arctic);
+      margin-bottom: 16px;
+    }
+
+    .success-steps { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+    .success-steps li {
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--platinum);
+      line-height: 1.55;
+    }
+
+    .success-step-num {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--a-bg);
+      border: 1px solid var(--a-bd);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700;
+      color: var(--arctic);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+    .sidebar-card {
+      background: rgba(11,30,61,0.3);
+      border: 1px solid var(--steel);
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .sidebar-card-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--white);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-step {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .sidebar-step:last-child { border-bottom: none; padding-bottom: 0; }
+    .sidebar-step:first-of-type { padding-top: 0; }
+
+    .sidebar-step-num {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--a-bg);
+      border: 1px solid var(--a-bd);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700;
+      color: var(--arctic);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .sidebar-step-text { font-size: 13px; color: var(--platinum); line-height: 1.55; }
+    .sidebar-step-text strong { color: var(--white); font-weight: 600; display: block; margin-bottom: 2px; font-size: 13px; }
+
+    .trust-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .trust-list li { display: flex; gap: 10px; font-size: 13px; color: var(--platinum); line-height: 1.5; }
+    .trust-check-sm { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid var(--arctic); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--arctic); font-size: 8px; font-weight: 700; margin-top: 2px; }
+
+    .sidebar-security {
+      background: var(--a-bg);
+      border: 0.5px solid var(--a-bd);
+      border-radius: 8px;
+      padding: 16px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .security-icon { flex-shrink: 0; margin-top: 2px; color: var(--arctic); }
+
+    .security-text { font-size: 12px; color: var(--platinum); line-height: 1.55; }
+    .security-text strong { color: var(--white); display: block; margin-bottom: 3px; font-size: 12px; }
+
+    /* FOOTER */
+    .footer { background: var(--abyss); border-top: 0.5px solid var(--steel); padding: 56px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 0.5px solid var(--steel); }
+    .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .footer-brand-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 12px; color: var(--white); letter-spacing: 0.07em; }
+    .footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--platinum); margin-bottom: 12px; }
+    .footer-loc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .footer-col-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--arctic); margin-bottom: 18px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 13px; color: var(--platinum); transition: color 0.18s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-legal { font-size: 11px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-legal a { color: var(--muted); transition: color 0.18s; }
+    .footer-legal a:hover { color: var(--platinum); }
+    .footer-trust-note { font-size: 11px; color: var(--muted); text-align: right; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .form-layout { grid-template-columns: 1fr; gap: 32px; }
+      .sidebar { order: -1; }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .nav { padding: 0 24px; }
+      .nav-links { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--abyss); padding: 24px; flex-direction: column; align-items: flex-start; gap: 20px; border-bottom: 0.5px solid var(--steel); z-index: 190; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+      .form-panel { padding: 28px 24px; }
+      .field-grid-2 { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .footer-trust-note { text-align: left; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Criterion Expert Partners — Home">
+    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" aria-hidden="true" focusable="false">
+      <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
+      <line x1="30" y1="4"  x2="30" y2="0"  stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
+      <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
+      <line x1="3"  y1="24" x2="10" y2="24" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square" opacity="0.4"/>
+    </svg>
+    <div class="nav-wordmark">
+      <span class="nav-name">CRITERION</span>
+      <span class="nav-sub">Expert Partners</span>
+    </div>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="services.html"     class="nav-link">Services</a>
+    <a href="how-it-works.html" class="nav-link">How It Works</a>
+    <a href="about.html"        class="nav-link">About</a>
+    <a href="faq.html"          class="nav-link">FAQ</a>
+    <a href="contact.html"      class="nav-link">Contact</a>
+    <a href="start-search.html" class="nav-cta">Find an Expert</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main id="main-content">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="page-heading">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <span>Start an Expert Search</span>
+      </nav>
+      <h1 id="page-heading">Start Your Expert Search</h1>
+      <p>Tell us about your case and we'll begin searching immediately. A Criterion search specialist will be in touch within 1 business day with pre-vetted expert candidates.</p>
+    </div>
+  </section>
+
+  <!-- FORM AREA -->
+  <section class="form-area">
+    <div class="container">
+      <div class="form-layout">
+
+        <!-- FORM PANEL -->
+        <div>
+
+          <!-- MAIN FORM (hidden on success) -->
+          <div class="form-panel" id="form-container">
+            <div class="form-panel-title">Case Request Form</div>
+            <p class="form-panel-sub">All fields marked with <span style="color:var(--arctic);">*</span> are required. Your information is secure and used solely to match you with the right expert.</p>
+
+            <!--
+              ============================================================
+              FORMSPREE: Case Intake Form — LIVE
+              Endpoint: https://formspree.io/f/xvzebvrn
+              Submissions go to contact@criterionexpertpartners.com
+              ============================================================
+            -->
+            <form
+              id="case-form"
+              action="https://formspree.io/f/xvzebvrn"
+              method="POST"
+              novalidate
+            >
+              <!-- Honeypot spam prevention — do not remove -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
+              <input type="hidden" name="_subject" value="New Case Request — Criterion Expert Partners">
+
+              <!-- CONTACT INFO -->
+              <div class="form-section-label">Your Contact Information</div>
+
+              <div class="field-grid-2">
+                <div class="field">
+                  <label for="firm_name">Firm name <span class="req" aria-label="required">*</span></label>
+                  <input type="text" id="firm_name" name="firm_name" placeholder="e.g. Smith &amp; Associates" required autocomplete="organization">
+                  <span class="field-error" id="firm_name-error">Please enter your firm name.</span>
+                </div>
+                <div class="field">
+                  <label for="attorney_name">Your name <span class="req" aria-label="required">*</span></label>
+                  <input type="text" id="attorney_name" name="attorney_name" placeholder="First and last name" required autocomplete="name">
+                  <span class="field-error" id="attorney_name-error">Please enter your name.</span>
+                </div>
+              </div>
+
+              <div class="field-grid-2">
+                <div class="field">
+                  <label for="email">Email <span class="req" aria-label="required">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="name@firm.com" required autocomplete="email">
+                  <span class="field-hint">Where we'll send expert profiles and updates</span>
+                  <span class="field-error" id="email-error">Please enter a valid email address.</span>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <!-- CASE DETAILS -->
+              <div class="form-section-label">Case Details</div>
+
+              <div class="field-grid-1">
+                <div class="field">
+                  <label for="service_needed">Which service do you need? <span class="req" aria-label="required">*</span></label>
+                  <select id="service_needed" name="service_needed" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option value="Expert Search & Placement">Start an Expert Search</option>
+                    <option value="Peer Review & Record Analysis">Peer Review &amp; Record Analysis</option>
+                    <option value="Independent Medical Examination">Independent Medical Examination (IME)</option>
+                    <option value="Bill Review">Bill Review</option>
+                    <option value="Site & Facility Inspection">Site &amp; Facility Inspection</option>
+                    <option value="Not sure — help me decide">Not sure — help me decide</option>
+                  </select>
+                  <span class="field-error" id="service_needed-error">Please select a service.</span>
+                </div>
+              </div>
+
+              <div class="field-grid-2">
+                <div class="field">
+                  <label for="practice_area">Practice area <span class="req" aria-label="required">*</span></label>
+                  <select id="practice_area" name="practice_area" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option>Medical Malpractice</option>
+                    <option>Personal Injury</option>
+                    <option>Construction Defect</option>
+                    <option>Intellectual Property</option>
+                    <option>Commercial Litigation</option>
+                    <option>Employment</option>
+                    <option>Environmental</option>
+                    <option>Real Estate</option>
+                    <option>Other</option>
+                  </select>
+                  <span class="field-error" id="practice_area-error">Please select a practice area.</span>
+                </div>
+                <div class="field">
+                  <label for="expert_specialty">Expert specialty needed <span class="req" aria-label="required">*</span></label>
+                  <input type="text" id="expert_specialty" name="expert_specialty" placeholder="e.g. Orthopedic surgeon" required>
+                  <span class="field-hint">Be as specific as possible</span>
+                  <span class="field-error" id="expert_specialty-error">Please describe the specialty needed.</span>
+                </div>
+              </div>
+
+              <div class="field-grid-2">
+                <div class="field">
+                  <label for="jurisdiction">Relevant jurisdiction(s) <span class="req" aria-label="required">*</span></label>
+                  <input type="text" id="jurisdiction" name="jurisdiction" placeholder="e.g. California, federal" required>
+                  <span class="field-error" id="jurisdiction-error">Please enter the relevant jurisdiction.</span>
+                </div>
+                <div class="field">
+                  <label for="timeline">Case timeline <span class="req" aria-label="required">*</span></label>
+                  <select id="timeline" name="timeline" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option value="Urgent — within 2 weeks">Urgent — within 2 weeks</option>
+                    <option value="Near-term — 1 to 2 months">Near-term — 1 to 2 months</option>
+                    <option value="Standard — 2 to 6 months">Standard — 2 to 6 months</option>
+                    <option value="Flexible">Flexible</option>
+                  </select>
+                  <span class="field-error" id="timeline-error">Please select a timeline.</span>
+                </div>
+              </div>
+
+              <div class="field-grid-1">
+                <div class="field">
+                  <label for="case_description">Briefly describe the case <span class="req" aria-label="required">*</span></label>
+                  <textarea id="case_description" name="case_description" placeholder="Key facts, the issue the expert needs to address, any specific requirements..." required></textarea>
+                  <span class="field-hint">2–3 sentences is sufficient. This helps us match the right expert to your case theory.</span>
+                  <span class="field-error" id="case_description-error">Please provide a brief case description.</span>
+                </div>
+              </div>
+
+              <!-- SUBMIT -->
+              <div class="form-submit-row">
+                <button type="submit" class="btn-submit" id="submit-btn">
+                  <span id="submit-label">Submit case request</span>
+                </button>
+                <div class="form-error-msg" id="form-error-msg">
+                  Something went wrong submitting your request. Please try again or contact us directly at <a href="mailto:contact@criterionexpertpartners.com" style="color:var(--error);text-decoration:underline;">contact@criterionexpertpartners.com</a>.
+                </div>
+                <p class="form-legal">
+                  By submitting, you agree to our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>. Your case information is handled under strict confidentiality.
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- SUCCESS STATE (shown after submission) -->
+          <div class="form-panel success-state" id="success-state" aria-live="polite">
+            <div class="success-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M7 16l6 6 12-12" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="square"/>
+              </svg>
+            </div>
+            <div class="success-title">Your request has been submitted.</div>
+            <p class="success-sub">Thank you for reaching out to Criterion. A search specialist will review your case and be in touch within 1 business day.</p>
+            <div class="success-next">
+              <div class="success-next-title">What happens next</div>
+              <ul class="success-steps">
+                <li>
+                  <div class="success-step-num" aria-hidden="true">1</div>
+                  <span>A Criterion search specialist reviews your case details, typically within a few hours of submission.</span>
+                </li>
+                <li>
+                  <div class="success-step-num" aria-hidden="true">2</div>
+                  <span>We search the Criterion Panel for candidates matching your exact case criteria, then run conflict and Daubert screening.</span>
+                </li>
+                <li>
+                  <div class="success-step-num" aria-hidden="true">3</div>
+                  <span>You receive 2–3 pre-vetted expert profiles with CVs, rates, and availability — typically within 24–48 hours.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" aria-label="What happens after you submit">
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="7" stroke="#38BDF8" stroke-width="1.8"/>
+                <path d="M10 6v4l3 2" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square"/>
+              </svg>
+              After you submit
+            </div>
+            <div class="sidebar-step">
+              <div class="sidebar-step-num" aria-hidden="true">1</div>
+              <div class="sidebar-step-text">
+                <strong>Within 1 business day</strong>
+                A search specialist reviews your case and contacts you to confirm details and next steps.
+              </div>
+            </div>
+            <div class="sidebar-step">
+              <div class="sidebar-step-num" aria-hidden="true">2</div>
+              <div class="sidebar-step-text">
+                <strong>Within 24–48 hours</strong>
+                You receive 2–3 pre-vetted expert profiles with CVs, rates, conflict clearance, and availability.
+              </div>
+            </div>
+            <div class="sidebar-step">
+              <div class="sidebar-step-num" aria-hidden="true">3</div>
+              <div class="sidebar-step-text">
+                <strong>You select your expert</strong>
+                Criterion facilitates the introduction and supports the engagement from there.
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10l4 4 8-8" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="square"/>
+              </svg>
+              Every expert we place is
+            </div>
+            <ul class="trust-list">
+              <li><div class="trust-check-sm" aria-hidden="true">✓</div> Credential-verified and currently active in practice</li>
+              <li><div class="trust-check-sm" aria-hidden="true">✓</div> Background-checked before panel acceptance</li>
+              <li><div class="trust-check-sm" aria-hidden="true">✓</div> Conflict-cleared against your case parties</li>
+              <li><div class="trust-check-sm" aria-hidden="true">✓</div> Daubert-screened for prior testimony issues</li>
+              <li><div class="trust-check-sm" aria-hidden="true">✓</div> Bound by confidentiality agreements</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-security">
+            <div class="security-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2L4 5v6c0 3.5 2.5 6.5 6 7.5 3.5-1 6-4 6-7.5V5L10 2z" stroke="#38BDF8" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="security-text">
+              <strong>Your case is protected</strong>
+              All case information is handled under strict confidentiality and secure data controls. Details are used solely to identify and match qualified experts.
+            </div>
+          </div>
+
+          <div class="sidebar-card" style="background:transparent;border-color:var(--border);">
+            <div style="font-size:13px;color:var(--platinum);line-height:1.65;">
+              Have a question before submitting? Contact us at<br>
+              <a href="mailto:contact@criterionexpertpartners.com" style="color:var(--arctic);font-weight:600;">contact@criterionexpertpartners.com</a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="16" height="22" viewBox="0 0 36 48" fill="none" aria-hidden="true">
+            <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
+            <line x1="30" y1="4"  x2="30" y2="0"  stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
+            <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+          <span class="footer-brand-name">CRITERION EXPERT PARTNERS</span>
+        </div>
+        <div class="footer-tagline">The Expert Standard.</div>
+        <div class="footer-loc">Los Angeles, California<br>Serving Litigation Firms Nationwide</div>
+      </div>
+      <div>
+        <div class="footer-col-label">Services</div>
+        <ul class="footer-links">
+          <li><a href="services/expert-search.html">Start an Expert Search</a></li>
+          <li><a href="services/peer-review.html">Peer Review &amp; Record Analysis</a></li>
+          <li><a href="services/ime.html">Independent Medical Examinations</a></li>
+          <li><a href="services/bill-review.html">Bill Review</a></li>
+          <li><a href="services/site-inspections.html">Site &amp; Facility Inspections</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">Firm</div>
+        <ul class="footer-links">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About Criterion</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="join-panel.html">Join the Expert Panel</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <span>&copy; 2026 Criterion Expert Partners. All rights reserved.</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-trust-note">All experts background-checked, credential-verified, and confidentiality bound.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Nav behaviours ──────────────────────────────────────────
+  const nav    = document.getElementById('main-nav');
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
+
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
+  });
+
+  // ── Form validation helpers ─────────────────────────────────
+  function showError(field, errorId) {
+    field.classList.add('invalid');
+    document.getElementById(errorId).style.display = 'block';
+  }
+
+  function clearError(field, errorId) {
+    field.classList.remove('invalid');
+    document.getElementById(errorId).style.display = 'none';
+  }
+
+  // Clear errors on input
+  document.querySelectorAll('#case-form input, #case-form select, #case-form textarea').forEach(el => {
+    el.addEventListener('input', () => {
+      el.classList.remove('invalid');
+      const errEl = document.getElementById(el.id + '-error');
+      if (errEl) errEl.style.display = 'none';
+    });
+  });
+
+  // ── Async form submission ───────────────────────────────────
+  const form          = document.getElementById('case-form');
+  const submitBtn     = document.getElementById('submit-btn');
+  const submitLabel   = document.getElementById('submit-label');
+  const formContainer = document.getElementById('form-container');
+  const successState  = document.getElementById('success-state');
+  const formErrorMsg  = document.getElementById('form-error-msg');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Client-side validation
+    let valid = true;
+    const required = [
+      { id: 'firm_name',        errId: 'firm_name-error' },
+      { id: 'attorney_name',    errId: 'attorney_name-error' },
+      { id: 'email',            errId: 'email-error' },
+      { id: 'service_needed',   errId: 'service_needed-error' },
+      { id: 'practice_area',    errId: 'practice_area-error' },
+      { id: 'expert_specialty', errId: 'expert_specialty-error' },
+      { id: 'jurisdiction',     errId: 'jurisdiction-error' },
+      { id: 'timeline',         errId: 'timeline-error' },
+      { id: 'case_description', errId: 'case_description-error' },
+    ];
+
+    required.forEach(({ id, errId }) => {
+      const el = document.getElementById(id);
+      if (!el.value.trim()) {
+        showError(el, errId);
+        valid = false;
+      } else {
+        clearError(el, errId);
+      }
+    });
+
+    // Email format check
+    const emailEl = document.getElementById('email');
+    if (emailEl.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+      showError(emailEl, 'email-error');
+      valid = false;
+    }
+
+    if (!valid) {
+      // Scroll to first error
+      const firstInvalid = form.querySelector('.invalid');
+      if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // Submit
+    submitLabel.textContent = 'Submitting…';
+    submitBtn.disabled = true;
+    formErrorMsg.style.display = 'none';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formContainer.style.display = 'none';
+        successState.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      submitLabel.textContent = 'Submit case request';
+      submitBtn.disabled = false;
+      formErrorMsg.style.display = 'block';
+    }
+  });
+</script>
+
+</body>
+</html>

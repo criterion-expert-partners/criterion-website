@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Criterion Expert Partners. Submit a case request, apply to join the expert panel, or reach us directly at contact@criterionexpertpartners.com.">
+  <title>Contact | Criterion Expert Partners</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+  <style>
+    :root{--abyss:#080C18;--navy:#0B1E3D;--steel:#1B3460;--platinum:#B4B9C8;--arctic:#38BDF8;--white:#F4F6FB;--muted:#5B6A88;--border:rgba(180,185,200,0.12);--a-bg:rgba(56,189,248,0.07);--a-bd:rgba(56,189,248,0.22);--nav-h:68px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--abyss);color:var(--white);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    button{cursor:pointer;font-family:inherit;}
+    .container{max-width:1100px;margin:0 auto;padding:0 40px;}
+    .eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--arctic);margin-bottom:16px;}
+    .eyebrow::before{content:'';width:20px;height:1.5px;background:var(--arctic);flex-shrink:0;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:6px;font-size:14px;font-weight:600;border:none;transition:opacity 0.18s;white-space:nowrap;}
+    .btn-arctic{background:var(--arctic);color:var(--abyss);}
+    .btn-arctic:hover{opacity:0.88;}
+    .btn-outline{background:transparent;color:var(--arctic);border:1px solid var(--arctic);}
+    .btn-outline:hover{background:var(--a-bg);}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:rgba(8,12,24,0.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:box-shadow 0.3s;}
+    .nav.scrolled{box-shadow:0 4px 28px rgba(0,0,0,0.32);}
+    .nav-logo{display:flex;align-items:center;gap:14px;}
+    .nav-wordmark{display:flex;flex-direction:column;}
+    .nav-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:13px;color:var(--white);letter-spacing:0.07em;line-height:1;}
+    .nav-sub{font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:7px;letter-spacing:0.2em;text-transform:uppercase;color:var(--platinum);margin-top:5px;}
+    .nav-links{display:flex;align-items:center;gap:28px;}
+    .nav-link{font-size:13px;color:var(--platinum);font-weight:400;transition:color 0.18s;position:relative;}
+    .nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--arctic);transition:width 0.2s;}
+    .nav-link:hover{color:var(--white);}
+    .nav-link:hover::after{width:100%;}
+    .nav-link.active{color:var(--white);}
+    .nav-link.active::after{width:100%;}
+    .nav-cta{background:var(--arctic);color:var(--abyss);padding:9px 20px;border-radius:6px;font-size:13px;font-weight:600;transition:opacity 0.18s;}
+    .nav-cta:hover{opacity:0.88;}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;}
+    .nav-toggle span{width:22px;height:1.5px;background:var(--platinum);display:block;transition:transform 0.28s,opacity 0.28s;}
+    .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+    .nav-toggle.open span:nth-child(2){opacity:0;}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+    .page-hero{padding:calc(var(--nav-h) + 60px) 0 56px;background:linear-gradient(160deg,var(--abyss) 0%,#0A1830 60%,var(--navy) 100%);border-bottom:0.5px solid var(--steel);position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(56,189,248,0.05) 0%,transparent 65%);top:-100px;right:-100px;pointer-events:none;}
+    .page-hero .container{position:relative;z-index:1;}
+    .page-hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(32px,5vw,54px);color:var(--white);line-height:1.08;letter-spacing:-0.02em;margin-bottom:14px;}
+    .page-hero p{font-size:16px;color:var(--platinum);line-height:1.75;max-width:520px;}
+    .contact-area{padding:80px 0 96px;}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:64px;}
+    .contact-card{padding:36px;background:rgba(11,30,61,0.3);border:1px solid var(--steel);border-radius:10px;display:flex;flex-direction:column;gap:16px;}
+    .contact-card.primary{border-color:rgba(56,189,248,0.3);border-top:2px solid var(--arctic);}
+    .contact-card-icon{width:44px;height:44px;border-radius:8px;background:var(--a-bg);border:0.5px solid var(--a-bd);display:flex;align-items:center;justify-content:center;}
+    .contact-card-label{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--arctic);}
+    .contact-card-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18px;color:var(--white);line-height:1.2;}
+    .contact-card-desc{font-size:13px;color:var(--platinum);line-height:1.65;flex:1;}
+    .contact-direct{background:rgba(11,30,61,0.2);border:1px solid var(--steel);border-radius:10px;padding:40px;}
+    .contact-direct-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+    .contact-direct-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:22px;color:var(--white);margin-bottom:12px;}
+    .contact-direct-desc{font-size:14px;color:var(--platinum);line-height:1.7;margin-bottom:24px;}
+    .contact-email-link{display:inline-flex;align-items:center;gap:8px;color:var(--arctic);font-size:16px;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;}
+    .contact-email-link:hover{text-decoration:underline;text-underline-offset:3px;}
+    .contact-meta{display:flex;flex-direction:column;gap:16px;}
+    .contact-meta-item{display:flex;flex-direction:column;gap:4px;}
+    .contact-meta-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);}
+    .contact-meta-value{font-size:14px;color:var(--platinum);}
+    .footer{background:var(--abyss);border-top:0.5px solid var(--steel);padding:56px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:48px;padding-bottom:40px;border-bottom:0.5px solid var(--steel);}
+    .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+    .footer-brand-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:12px;color:var(--white);letter-spacing:0.07em;}
+    .footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--platinum);margin-bottom:12px;}
+    .footer-loc{font-size:12px;color:var(--muted);line-height:1.6;}
+    .footer-col-label{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--arctic);margin-bottom:18px;}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-links a{font-size:13px;color:var(--platinum);transition:color 0.18s;}
+    .footer-links a:hover{color:var(--white);}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-legal{font-size:11px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;}
+    .footer-legal a{color:var(--muted);transition:color 0.18s;}
+    .footer-legal a:hover{color:var(--platinum);}
+    .footer-trust-note{font-size:11px;color:var(--muted);text-align:right;}
+    @media(max-width:900px){
+      .container{padding:0 24px;}
+      .nav{padding:0 24px;}
+      .nav-links{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--abyss);padding:24px;flex-direction:column;align-items:flex-start;gap:20px;border-bottom:0.5px solid var(--steel);z-index:190;}
+      .nav-links.open{display:flex;}
+      .nav-toggle{display:flex;}
+      .contact-grid{grid-template-columns:1fr;}
+      .contact-direct-grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr;gap:32px;}
+      .footer-bottom{flex-direction:column;align-items:flex-start;}
+      .footer-trust-note{text-align:left;}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0.01ms !important;}html{scroll-behavior:auto;}}
+  </style>
+</head>
+<body>
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Criterion Expert Partners — Home">
+    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" aria-hidden="true" focusable="false">
+      <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
+      <line x1="30" y1="4" x2="30" y2="0" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
+      <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
+      <line x1="3" y1="24" x2="10" y2="24" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square" opacity="0.4"/>
+    </svg>
+    <div class="nav-wordmark"><span class="nav-name">CRITERION</span><span class="nav-sub">Expert Partners</span></div>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <div class="nav-dropdown" id="about-dd">
+      <button class="nav-dd-btn" aria-haspopup="true" aria-expanded="false">About <span class="nav-dd-arrow" aria-hidden="true">›</span></button>
+      <div class="nav-dd-menu" role="menu">
+        <a href="about.html" class="nav-dd-item" role="menuitem">About Criterion</a>
+        <a href="faq.html"   class="nav-dd-item"  role="menuitem">FAQ</a>
+      </div>
+    </div>
+    <a href="contact.html" class="nav-link active">Contact</a>
+    <a href="start-search.html" class="nav-cta">Find an Expert</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<main id="main-content">
+  <section class="page-hero" aria-labelledby="page-heading">
+    <div class="container">
+      <h1 id="page-heading">Contact Criterion</h1>
+      <p>Not sure where to start? Use the guide below to reach the right place. Most requests are handled fastest through the appropriate form.</p>
+    </div>
+  </section>
+  <section class="contact-area">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-card primary">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="square"/></svg>
+          </div>
+          <div class="contact-card-label">Law Firms</div>
+          <div class="contact-card-title">Start an expert search or request a service</div>
+          <div class="contact-card-desc">Submit your case details through our intake form. A search specialist will respond within 1 business day with next steps and pre-vetted expert candidates within 24–48 hours.</div>
+          <a href="start-search.html" class="btn btn-arctic" style="margin-top:auto;">Submit a case request →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="4" stroke="#38BDF8" stroke-width="1.8"/><path d="M3 18c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="contact-card-label">Expert Witnesses</div>
+          <div class="contact-card-title">Apply to join the Criterion Panel</div>
+          <div class="contact-card-desc">Submit your credentials, specialty, and availability through our expert application. Applications are reviewed within 2–3 business days and all applicants undergo credential verification.</div>
+          <a href="join-panel.html" class="btn btn-outline" style="margin-top:auto;">Apply to the panel →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="1" stroke="#38BDF8" stroke-width="1.8"/><path d="M3 7l7 5 7-5" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </div>
+          <div class="contact-card-label">General Inquiries</div>
+          <div class="contact-card-title">Reach us directly by email</div>
+          <div class="contact-card-desc">For questions that don't fit the forms above — media, partnerships, or anything else — email us directly. We respond to all inquiries within 1 business day.</div>
+          <a href="mailto:contact@criterionexpertpartners.com" class="btn btn-outline" style="margin-top:auto;">Send an email →</a>
+        </div>
+      </div>
+      <div class="contact-direct">
+        <div class="contact-direct-grid">
+          <div>
+            <div class="contact-direct-title">Direct contact</div>
+            <div class="contact-direct-desc">Prefer to reach us without a form? We're available by email for all inquiries. We aim to respond to every message within 1 business day, Monday through Friday.</div>
+            <a href="mailto:contact@criterionexpertpartners.com" class="contact-email-link">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="5" width="14" height="10" rx="1" stroke="#38BDF8" stroke-width="1.8"/><path d="M3 7l7 5 7-5" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square"/></svg>
+              contact@criterionexpertpartners.com
+            </a>
+          </div>
+          <div class="contact-meta">
+            <div class="contact-meta-item">
+              <div class="contact-meta-label">Office location</div>
+              <div class="contact-meta-value">Los Angeles, California</div>
+            </div>
+            <div class="contact-meta-item">
+              <div class="contact-meta-label">Geographic coverage</div>
+              <div class="contact-meta-value">Serving litigation firms nationwide</div>
+            </div>
+            <div class="contact-meta-item">
+              <div class="contact-meta-label">Response time</div>
+              <div class="contact-meta-value">Within 1 business day</div>
+            </div>
+            <div class="contact-meta-item">
+              <div class="contact-meta-label">Expert profiles delivered</div>
+              <div class="contact-meta-value">24–48 hours from case submission</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="16" height="22" viewBox="0 0 36 48" fill="none" aria-hidden="true"><polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/><line x1="30" y1="4" x2="30" y2="0" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/><line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/></svg>
+          <span class="footer-brand-name">CRITERION EXPERT PARTNERS</span>
+        </div>
+        <div class="footer-tagline">The Expert Standard.</div>
+        <div class="footer-loc">Los Angeles, California<br>Serving Litigation Firms Nationwide</div>
+      </div>
+      <div>
+        <div class="footer-col-label">Services</div>
+        <ul class="footer-links">
+          <li><a href="services/expert-search.html">Start an Expert Search</a></li>
+          <li><a href="services/peer-review.html">Peer Review &amp; Record Analysis</a></li>
+          <li><a href="services/ime.html">Independent Medical Examinations</a></li>
+          <li><a href="services/bill-review.html">Bill Review</a></li>
+          <li><a href="services/site-inspections.html">Site &amp; Facility Inspections</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">Firm</div>
+        <ul class="footer-links">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About Criterion</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="join-panel.html">Join the Expert Panel</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <span>&copy; 2026 Criterion Expert Partners. All rights reserved.</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-trust-note">All experts background-checked, credential-verified, and confidentiality bound.</div>
+    </div>
+  </div>
+</footer>
+<script>
+  const nav=document.getElementById('main-nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>10),{passive:true});
+  const toggle=document.getElementById('nav-toggle');
+  const links=document.getElementById('nav-links');
+  toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&links.classList.contains('open')){links.classList.remove('open');toggle.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.focus();}});
+
+  // About nav dropdown
+  const aboutDd = document.getElementById('about-dd');
+  if (aboutDd) {
+    const ddBtn = aboutDd.querySelector('.nav-dd-btn');
+    aboutDd.addEventListener('click', e => e.stopPropagation());
+    ddBtn.addEventListener('click', () => {
+      const isOpen = aboutDd.classList.toggle('open');
+      ddBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('click', () => {
+      aboutDd.classList.remove('open');
+      if (ddBtn) ddBtn.setAttribute('aria-expanded', 'false');
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { aboutDd.classList.remove('open'); if (ddBtn) ddBtn.setAttribute('aria-expanded','false'); }
+    });
+  }
+</script>
+</body>
+</html>

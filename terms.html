@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Service for Criterion Expert Partners. Governing the use of our website and expert witness consulting and placement services.">
+  <title>Terms of Service | Criterion Expert Partners</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--abyss:#080C18;--navy:#0B1E3D;--steel:#1B3460;--platinum:#B4B9C8;--arctic:#38BDF8;--white:#F4F6FB;--muted:#5B6A88;--border:rgba(180,185,200,0.12);--a-bg:rgba(56,189,248,0.07);--nav-h:68px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--abyss);color:var(--white);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    button{cursor:pointer;font-family:inherit;}
+    .container{max-width:1100px;margin:0 auto;padding:0 40px;}
+    .prose{max-width:720px;margin:0 auto;padding:0 40px;}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:rgba(8,12,24,0.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:box-shadow 0.3s;}
+    .nav.scrolled{box-shadow:0 4px 28px rgba(0,0,0,0.32);}
+    .nav-logo{display:flex;align-items:center;gap:14px;}
+    .nav-wordmark{display:flex;flex-direction:column;}
+    .nav-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:13px;color:var(--white);letter-spacing:0.07em;line-height:1;}
+    .nav-sub{font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:7px;letter-spacing:0.2em;text-transform:uppercase;color:var(--platinum);margin-top:5px;}
+    .nav-links{display:flex;align-items:center;gap:28px;}
+    .nav-link{font-size:13px;color:var(--platinum);font-weight:400;transition:color 0.18s;position:relative;}
+    .nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--arctic);transition:width 0.2s;}
+    .nav-link:hover{color:var(--white);}
+    .nav-link:hover::after{width:100%;}
+    .nav-cta{background:var(--arctic);color:var(--abyss);padding:9px 20px;border-radius:6px;font-size:13px;font-weight:600;transition:opacity 0.18s;}
+    .nav-cta:hover{opacity:0.88;}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;}
+    .nav-toggle span{width:22px;height:1.5px;background:var(--platinum);display:block;transition:transform 0.28s,opacity 0.28s;}
+    .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+    .nav-toggle.open span:nth-child(2){opacity:0;}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+    .nav-dropdown{position:relative;}
+    .nav-dd-btn{background:none;border:none;font-size:13px;color:var(--platinum);font-family:'Inter',sans-serif;font-weight:400;cursor:pointer;display:flex;align-items:center;gap:5px;padding:0;transition:color 0.18s;position:relative;}
+    .nav-dd-btn::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--arctic);transition:width 0.2s;}
+    .nav-dd-btn:hover{color:var(--white);}
+    .nav-dd-btn:hover::after{width:100%;}
+    .nav-dd-arrow{font-size:9px;transition:transform 0.2s;display:inline-block;opacity:0.6;margin-left:1px;}
+    .nav-dropdown.open .nav-dd-arrow{transform:rotate(90deg);}
+    .nav-dd-menu{position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%) translateY(-4px);background:var(--navy);border:1px solid var(--steel);border-radius:8px;padding:6px;min-width:185px;opacity:0;visibility:hidden;transition:opacity 0.18s,visibility 0.18s,transform 0.18s;z-index:300;box-shadow:0 8px 32px rgba(0,0,0,0.32);}
+    .nav-dropdown.open .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+    .nav-dd-item{display:block;padding:10px 16px;font-size:13px;color:var(--platinum);border-radius:5px;transition:background 0.15s,color 0.15s;}
+    .nav-dd-item:hover{background:rgba(56,189,248,0.08);color:var(--white);}
+    @media(max-width:900px){.nav-dd-btn{display:none;}.nav-dd-menu{position:static;transform:none !important;opacity:1 !important;visibility:visible !important;background:transparent;border:none;padding:0;box-shadow:none;min-width:0;}.nav-dd-item{padding:0;font-size:13px;color:var(--platinum);}.nav-dd-item:hover{background:transparent;color:var(--white);}}
+    .page-hero{padding:calc(var(--nav-h) + 56px) 0 48px;background:linear-gradient(160deg,var(--abyss) 0%,#0A1830 60%,var(--navy) 100%);border-bottom:0.5px solid var(--steel);}
+    .page-hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(30px,4vw,46px);color:var(--white);line-height:1.08;letter-spacing:-0.02em;margin-bottom:12px;}
+    .page-hero .meta{font-size:13px;color:var(--muted);}
+    .policy-body{padding:72px 0 96px;}
+    .policy-section{margin-bottom:56px;}
+    .policy-section:last-child{margin-bottom:0;}
+    .policy-h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:20px;color:var(--white);margin-bottom:16px;padding-bottom:12px;border-bottom:0.5px solid var(--border);}
+    .policy-h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--white);margin-bottom:10px;margin-top:24px;}
+    .policy-p{font-size:14px;color:var(--platinum);line-height:1.8;margin-bottom:14px;}
+    .policy-p a{color:var(--arctic);text-decoration:underline;text-underline-offset:2px;}
+    .policy-p strong{color:var(--white);}
+    .policy-ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:14px;}
+    .policy-ul li{font-size:14px;color:var(--platinum);padding-left:18px;position:relative;line-height:1.65;}
+    .policy-ul li::before{content:'—';position:absolute;left:0;color:var(--muted);font-size:11px;top:3px;}
+    .footer{background:var(--abyss);border-top:0.5px solid var(--steel);padding:56px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:48px;padding-bottom:40px;border-bottom:0.5px solid var(--steel);}
+    .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+    .footer-brand-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:12px;color:var(--white);letter-spacing:0.07em;}
+    .footer-tagline{font-size:15px;color:var(--platinum);margin-bottom:12px;font-style:italic;}
+    .footer-loc{font-size:12px;color:var(--muted);line-height:1.6;}
+    .footer-col-label{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--arctic);margin-bottom:18px;}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-links a{font-size:13px;color:var(--platinum);transition:color 0.18s;}
+    .footer-links a:hover{color:var(--white);}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-legal{font-size:11px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;}
+    .footer-legal a{color:var(--muted);transition:color 0.18s;}
+    .footer-legal a:hover{color:var(--platinum);}
+    .footer-trust-note{font-size:11px;color:var(--muted);text-align:right;}
+    @media(max-width:900px){.container,.prose{padding:0 24px;}.nav{padding:0 24px;}.nav-links{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--abyss);padding:24px;flex-direction:column;align-items:flex-start;gap:20px;border-bottom:0.5px solid var(--steel);z-index:190;}.nav-links.open{display:flex;}.nav-toggle{display:flex;}.footer-grid{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;align-items:flex-start;}.footer-trust-note{text-align:left;}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0.01ms !important;}html{scroll-behavior:auto;}}
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Criterion Expert Partners — Home">
+    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" aria-hidden="true" focusable="false">
+      <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
+      <line x1="30" y1="4" x2="30" y2="0" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
+      <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
+      <line x1="3" y1="24" x2="10" y2="24" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square" opacity="0.4"/>
+    </svg>
+    <div class="nav-wordmark"><span class="nav-name">CRITERION</span><span class="nav-sub">Expert Partners</span></div>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="how-it-works.html" class="nav-link">How It Works</a>
+    <div class="nav-dropdown" id="about-dd">
+      <button class="nav-dd-btn" aria-haspopup="true" aria-expanded="false">About <span class="nav-dd-arrow" aria-hidden="true">›</span></button>
+      <div class="nav-dd-menu" role="menu">
+        <a href="about.html" class="nav-dd-item" role="menuitem">About Criterion</a>
+        <a href="faq.html"   class="nav-dd-item" role="menuitem">FAQ</a>
+      </div>
+    </div>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="start-search.html" class="nav-cta">Find an Expert</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="prose">
+      <h1>Terms of Service</h1>
+      <p class="meta">Criterion Expert Partners &nbsp;·&nbsp; Los Angeles, California &nbsp;·&nbsp; Last updated: July 2026</p>
+    </div>
+  </section>
+
+  <div class="policy-body">
+    <div class="prose">
+
+      <div class="policy-section">
+        <p class="policy-p">These Terms of Service ("Terms") govern your use of the website located at criterionexpertpartners.com and the services provided by Criterion Expert Partners ("Criterion," "we," "us," or "our"). By accessing our website or submitting a request for services, you agree to be bound by these Terms. If you do not agree, do not use our website or services.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">1. Services Description</h2>
+        <p class="policy-p">Criterion Expert Partners is a consulting and placement firm that acts as an intermediary between litigation firms seeking expert witnesses and professionals who provide expert witness services. Our services include expert witness search and placement, peer review and record analysis, independent medical examination coordination, bill review, and site and facility inspection coordination.</p>
+        <p class="policy-p">Criterion acts as a broker and coordinator. We are not an employer of the experts we place, and we are not a law firm. Nothing in our website, communications, or services constitutes legal advice. The experts we place are independent professionals who contract directly with the engaging law firm or attorney.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">2. Use of the Website</h2>
+        <p class="policy-p">You may use our website for lawful purposes only. You agree not to:</p>
+        <ul class="policy-ul">
+          <li>Use the website in any way that violates applicable federal, state, or local laws or regulations</li>
+          <li>Submit false, misleading, or fraudulent information through our forms</li>
+          <li>Attempt to gain unauthorized access to any part of our website or systems</li>
+          <li>Use automated means to scrape, crawl, or extract content from our website without our written consent</li>
+          <li>Transmit any harmful, offensive, or disruptive content through our website</li>
+        </ul>
+        <p class="policy-p">We reserve the right to terminate or restrict access to our website and services at our discretion, without notice, for conduct that we determine violates these Terms or is otherwise harmful to Criterion, our clients, or experts.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">3. Submission of Information</h2>
+        <p class="policy-p">When you submit a case intake form, expert panel application, or other information through our website, you represent that the information you provide is accurate and complete to the best of your knowledge. You authorize Criterion to use that information to provide the services you have requested, as described in our <a href="privacy.html">Privacy Policy</a>.</p>
+        <p class="policy-p">By submitting a case intake form, you acknowledge that you are initiating a business relationship with Criterion for the purpose of obtaining expert witness consulting services. Submission of a form does not guarantee the availability of a qualified expert or the completion of a placement.</p>
+        <p class="policy-p">By submitting an expert panel application, you represent that all credentials, experience, and other information you provide are accurate. You authorize Criterion to conduct credential verification, background checks, and conflict-of-interest screening as part of our panel evaluation process.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">4. No Guarantee of Results</h2>
+        <p class="policy-p">Criterion makes no guarantee that any expert witness we identify or introduce will be accepted by a court, survive Daubert or Frye challenge, or produce testimony or reports favorable to any party. We conduct thorough vetting and screening, but the admissibility, weight, and outcome of expert testimony depends on case-specific factors outside our control.</p>
+        <p class="policy-p">We make no guarantee that an expert will be available within any particular timeline, that a specific expert will be available for any given matter, or that a search will produce candidates who meet every specification provided by the client. We will communicate transparently when a search produces limited results or when availability constraints affect our ability to meet the requested timeline.</p>
+        <p class="policy-p">Criterion does not guarantee the outcome of any case, settlement, or legal proceeding in which an expert we place participates.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">5. Confidentiality</h2>
+        <p class="policy-p">Criterion treats all case information submitted by law firms as confidential. We will not disclose the identity of a client firm or the details of a specific case beyond what is necessary to conduct the requested service and coordinate an expert match. All Criterion staff and panel members who access case information are subject to confidentiality obligations.</p>
+        <p class="policy-p">Experts on the Criterion Panel are bound by confidentiality agreements. However, Criterion cannot guarantee the conduct of individual experts once engaged directly by a law firm. Responsibility for the confidentiality of information shared directly between attorney and expert rests with those parties.</p>
+        <p class="policy-p">By submitting information to Criterion, you agree that Criterion may share limited case information with expert candidates for the purpose of assessing their suitability and availability for the matter, consistent with our Privacy Policy.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">6. Fees and Payment</h2>
+        <p class="policy-p">Criterion's fees for services are established separately through engagement-specific agreements. Nothing in these Terms constitutes an agreement to provide services at any particular price. Fees, payment terms, and scope of services are confirmed in writing before work begins on any engagement.</p>
+        <p class="policy-p">Expert witnesses introduced through Criterion bill the engaging law firm directly at the rates disclosed in the expert's profile. Criterion is not responsible for billing disputes between law firms and expert witnesses.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">7. Intellectual Property</h2>
+        <p class="policy-p">All content on this website — including text, design, graphics, logos, and the selection and arrangement of content — is the property of Criterion Expert Partners and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from any content on this website without our express written consent.</p>
+        <p class="policy-p">Nothing in these Terms grants you any license or right to use the Criterion name, logo, or any other marks displayed on this website.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">8. Disclaimer of Warranties</h2>
+        <p class="policy-p">This website and our services are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. Criterion disclaims all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+        <p class="policy-p">We do not warrant that our website will be uninterrupted or error-free, that defects will be corrected, or that our website or the servers that make it available are free of viruses or other harmful components.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">9. Limitation of Liability</h2>
+        <p class="policy-p">To the fullest extent permitted by applicable law, Criterion Expert Partners shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our website or services, including but not limited to damages for loss of business, loss of revenue, loss of data, or failure to achieve a particular case outcome.</p>
+        <p class="policy-p">Criterion's total liability for any claim arising out of or related to these Terms or our services shall not exceed the fees paid by you to Criterion in the three months preceding the claim.</p>
+        <p class="policy-p">Some jurisdictions do not allow the exclusion or limitation of certain types of damages. The limitations above may not apply to you in their entirety.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">10. Indemnification</h2>
+        <p class="policy-p">You agree to indemnify, defend, and hold harmless Criterion Expert Partners and its officers, employees, and agents from and against any claims, liabilities, damages, losses, and expenses — including reasonable attorneys' fees — arising out of or in any way connected with your access to or use of our website or services, your violation of these Terms, or your violation of any rights of any third party.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">11. Governing Law and Dispute Resolution</h2>
+        <p class="policy-p">These Terms are governed by the laws of the State of California, without regard to its conflict of law provisions. Any dispute arising out of or relating to these Terms or our services shall be resolved exclusively in the state or federal courts located in Los Angeles County, California, and you consent to the personal jurisdiction of those courts.</p>
+        <p class="policy-p">Before initiating any formal legal proceeding, the parties agree to make a good-faith effort to resolve any dispute through direct negotiation for a period of at least thirty days following written notice of the dispute.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">12. Changes to These Terms</h2>
+        <p class="policy-p">We reserve the right to modify these Terms at any time. When we do, we will update the "Last updated" date at the top of this page. Your continued use of our website or services after any changes constitutes your acceptance of the updated Terms. We encourage you to review these Terms periodically.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2 class="policy-h2">13. Contact</h2>
+        <p class="policy-p">Questions about these Terms should be directed to:</p>
+        <p class="policy-p">
+          <strong>Criterion Expert Partners</strong><br>
+          Los Angeles, California<br>
+          <a href="mailto:contact@criterionexpertpartners.com">contact@criterionexpertpartners.com</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="16" height="22" viewBox="0 0 36 48" fill="none" aria-hidden="true">
+            <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
+            <line x1="30" y1="4" x2="30" y2="0" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
+            <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+          <span class="footer-brand-name">CRITERION EXPERT PARTNERS</span>
+        </div>
+        <div class="footer-tagline">The Expert Standard.</div>
+        <div class="footer-loc">Los Angeles, California<br>Serving Litigation Firms Nationwide</div>
+      </div>
+      <div>
+        <div class="footer-col-label">Services</div>
+        <ul class="footer-links">
+          <li><a href="services/expert-search.html">Start an Expert Search</a></li>
+          <li><a href="services/peer-review.html">Peer Review &amp; Record Analysis</a></li>
+          <li><a href="services/ime.html">Independent Medical Examinations</a></li>
+          <li><a href="services/bill-review.html">Bill Review</a></li>
+          <li><a href="services/site-inspections.html">Site &amp; Facility Inspections</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">Firm</div>
+        <ul class="footer-links">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About Criterion</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="join-panel.html">Join the Expert Panel</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <span>&copy; 2026 Criterion Expert Partners. All rights reserved.</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-trust-note">All experts background-checked, credential-verified, and confidentiality bound.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('main-nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>10),{passive:true});
+  const toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');
+  toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&links.classList.contains('open')){links.classList.remove('open');toggle.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.focus();}});
+  const aboutDd=document.getElementById('about-dd');
+  if(aboutDd){const ddBtn=aboutDd.querySelector('.nav-dd-btn');aboutDd.addEventListener('click',e=>e.stopPropagation());ddBtn.addEventListener('click',()=>{const isOpen=aboutDd.classList.toggle('open');ddBtn.setAttribute('aria-expanded',String(isOpen));});document.addEventListener('click',()=>{aboutDd.classList.remove('open');ddBtn.setAttribute('aria-expanded','false');});}
+</script>
+</body>
+</html>
