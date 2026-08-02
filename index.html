@@ -203,6 +203,79 @@
     .nav-link:hover { color: var(--white); }
     .nav-link:hover::after { width: 100%; }
 
+    /* Dropdown styling */
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--platinum);
+      font-weight: 400;
+      transition: color 0.18s;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-toggle:hover { color: var(--white); }
+
+    .nav-dropdown-toggle::after {
+      content: '▼';
+      font-size: 8px;
+      opacity: 0.6;
+      transition: opacity 0.18s, transform 0.2s;
+    }
+
+    .nav-dropdown-toggle.open::after {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: -12px;
+      background: rgba(11, 30, 61, 0.98);
+      border: 1px solid var(--steel);
+      border-radius: 8px;
+      padding: 12px 0;
+      min-width: 200px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s, visibility 0.2s;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 300;
+    }
+
+    .nav-dropdown-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-item {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13px;
+      color: var(--platinum);
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-item:hover {
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--white);
+    }
+
     .nav-cta {
       background: var(--arctic);
       color: var(--abyss);
@@ -211,6 +284,7 @@
       font-size: 13px;
       font-weight: 600;
       transition: opacity 0.18s;
+      border: none;
     }
     .nav-cta:hover { opacity: 0.88; }
 
@@ -678,6 +752,24 @@
       .nav-links.open { display: flex; }
       .nav-toggle     { display: flex; }
 
+      /* Mobile dropdown */
+      .nav-dropdown-menu {
+        position: static;
+        background: rgba(27, 52, 96, 0.6);
+        border: none;
+        border-radius: 0;
+        padding: 12px 0 12px 20px;
+        margin-top: 0;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+
+      .nav-dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+      }
+
       .hero { padding: calc(var(--nav-h) + 60px) 24px 60px; }
 
       .trust-strip { padding: 16px 24px; gap: 16px; }
@@ -746,8 +838,18 @@
   <div class="nav-links" id="nav-links" role="menu">
     <a href="/services.html"      class="nav-link" role="menuitem">Services</a>
     <a href="/how-it-works.html"  class="nav-link" role="menuitem">How It Works</a>
-    <a href="/about.html"         class="nav-link" role="menuitem">About</a>
-    <a href="/faq.html"           class="nav-link" role="menuitem">FAQ</a>
+    
+    <!-- About Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle" id="about-toggle" aria-label="About menu" aria-expanded="false">
+        About
+      </button>
+      <div class="nav-dropdown-menu" id="about-menu" role="menu">
+        <a href="/about.html" class="nav-dropdown-item" role="menuitem">About Criterion</a>
+        <a href="/faq.html" class="nav-dropdown-item" role="menuitem">FAQ</a>
+      </div>
+    </div>
+    
     <a href="/contact.html"       class="nav-link" role="menuitem">Contact</a>
     <a href="/start-search.html"  class="nav-cta"  role="menuitem">Find an Expert</a>
   </div>
@@ -1021,7 +1123,6 @@
         <ul class="footer-links">
           <li><a href="/how-it-works.html">How It Works</a></li>
           <li><a href="/about.html">About Criterion</a></li>
-          <li><a href="/faq.html">FAQ</a></li>
           <li><a href="/join-panel.html">Join the Expert Panel</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
@@ -1070,6 +1171,37 @@
     });
   });
 
+  // Desktop dropdown toggle
+  const aboutToggle = document.getElementById('about-toggle');
+  const aboutMenu = document.getElementById('about-menu');
+
+  if (aboutToggle && aboutMenu) {
+    aboutToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const isOpen = aboutMenu.classList.toggle('open');
+      aboutToggle.classList.toggle('open', isOpen);
+      aboutToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        aboutMenu.classList.remove('open');
+        aboutToggle.classList.remove('open');
+        aboutToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close dropdown on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && aboutMenu.classList.contains('open')) {
+        aboutMenu.classList.remove('open');
+        aboutToggle.classList.remove('open');
+        aboutToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   // Close nav on Escape key
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && navLinks.classList.contains('open')) {
@@ -1083,3 +1215,4 @@
 
 </body>
 </html>
+
