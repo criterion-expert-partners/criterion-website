@@ -59,6 +59,98 @@
     .nav-link.active::after { width: 100%; }
     .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; }
     .nav-cta:hover { opacity: 0.88; }
+     /* Dropdown styling */
+    .nav-dropdown {
+      position: relative;
+    }
+ 
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--platinum);
+      font-weight: 400;
+      transition: color 0.18s;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      white-space: nowrap;
+    }
+ 
+    .nav-dropdown-toggle:hover { color: var(--white); }
+ 
+    .nav-dropdown-toggle::after {
+      content: '▼';
+      font-size: 8px;
+      opacity: 0.6;
+      transition: opacity 0.18s, transform 0.2s;
+    }
+ 
+    .nav-dropdown-toggle.open::after {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+ 
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: -12px;
+      background: rgba(11, 30, 61, 0.98);
+      border: 1px solid var(--steel);
+      border-radius: 8px;
+      padding: 12px 0;
+      min-width: 200px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s, visibility 0.2s;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 300;
+    }
+ 
+    .nav-dropdown-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+ 
+    .nav-dropdown-item {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13px;
+      color: var(--platinum);
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+ 
+    .nav-dropdown-item:hover {
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--white);
+    }
+ 
+    /* Mobile dropdown */
+    @media (max-width: 900px) {
+      .nav-dropdown-menu {
+        position: static;
+        background: rgba(27, 52, 96, 0.6);
+        border: none;
+        border-radius: 0;
+        padding: 12px 0 12px 20px;
+        margin-top: 0;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+ 
+      .nav-dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
     .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; }
     .nav-toggle span { width: 22px; height: 1.5px; background: var(--platinum); display: block; transition: transform 0.28s, opacity 0.28s; }
     .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
@@ -161,8 +253,9 @@
 
 <!-- NAV -->
 <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo" aria-label="Criterion Expert Partners — Home">
-    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" aria-hidden="true" focusable="false">
+ 
+  <a href="/" class="nav-logo" aria-label="Criterion Expert Partners — Home">
+    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
       <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
       <line x1="30" y1="4"  x2="30" y2="0"  stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
       <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
@@ -173,22 +266,33 @@
       <span class="nav-sub">Expert Partners</span>
     </div>
   </a>
-  <div class="nav-links" id="nav-links">
-    <a href="services.html"     class="nav-link">Services</a>
-    <a href="how-it-works.html" class="nav-link">How It Works</a>
-        <div class="nav-dropdown" id="about-dd">
-      <button class="nav-dd-btn active" aria-haspopup="true" aria-expanded="false">About <span class="nav-dd-arrow" aria-hidden="true">›</span></button>
-      <div class="nav-dd-menu" role="menu">
-        <a href="about.html" class="nav-dd-item active" role="menuitem">About Criterion</a>
-        <a href="faq.html"   class="nav-dd-item"  role="menuitem">FAQ</a>
+ 
+  <div class="nav-links" id="nav-links" role="menu">
+    <a href="/services.html"      class="nav-link" role="menuitem">Services</a>
+    <a href="/how-it-works.html"  class="nav-link" role="menuitem">How It Works</a>
+    
+    <!-- About Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle" id="about-toggle" aria-label="About menu" aria-expanded="false">
+        About
+      </button>
+      <div class="nav-dropdown-menu" id="about-menu" role="menu">
+        <a href="/about.html" class="nav-dropdown-item" role="menuitem">About Criterion</a>
+        <a href="/faq.html" class="nav-dropdown-item" role="menuitem">FAQ</a>
       </div>
     </div>
-    <a href="contact.html"      class="nav-link">Contact</a>
-    <a href="start-search.html" class="nav-cta">Find an Expert</a>
+    
+    <a href="/contact.html"       class="nav-link" role="menuitem">Contact</a>
+    <a href="/start-search.html"  class="nav-cta"  role="menuitem">Find an Expert</a>
   </div>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+ 
+  <button class="nav-toggle" id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-links">
     <span></span><span></span><span></span>
   </button>
+ 
 </nav>
 
 <main id="main-content">
@@ -386,41 +490,71 @@
 </footer>
 
 <script>
+  // Sticky nav shadow
   const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
-  const toggle = document.getElementById('nav-toggle');
-  const links  = document.getElementById('nav-links');
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // Mobile nav toggle
+  const toggle   = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', function () {
+    const open = navLinks.classList.toggle('open');
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
   });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
-  }));
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && links.classList.contains('open')) {
-      links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.focus();
-    }
+
+  // Close nav on link click (mobile)
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
   });
 
-  // About nav dropdown
-  const aboutDd = document.getElementById('about-dd');
-  if (aboutDd) {
-    const ddBtn = aboutDd.querySelector('.nav-dd-btn');
-    aboutDd.addEventListener('click', e => e.stopPropagation());
-    ddBtn.addEventListener('click', () => {
-      const isOpen = aboutDd.classList.toggle('open');
-      ddBtn.setAttribute('aria-expanded', String(isOpen));
+  // Desktop dropdown toggle
+  const aboutToggle = document.getElementById('about-toggle');
+  const aboutMenu = document.getElementById('about-menu');
+
+  if (aboutToggle && aboutMenu) {
+    aboutToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const isOpen = aboutMenu.classList.toggle('open');
+      aboutToggle.classList.toggle('open', isOpen);
+      aboutToggle.setAttribute('aria-expanded', String(isOpen));
     });
-    document.addEventListener('click', () => {
-      aboutDd.classList.remove('open');
-      if (ddBtn) ddBtn.setAttribute('aria-expanded', 'false');
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        aboutMenu.classList.remove('open');
+        aboutToggle.classList.remove('open');
+        aboutToggle.setAttribute('aria-expanded', 'false');
+      }
     });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { aboutDd.classList.remove('open'); if (ddBtn) ddBtn.setAttribute('aria-expanded','false'); }
+
+    // Close dropdown on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && aboutMenu.classList.contains('open')) {
+        aboutMenu.classList.remove('open');
+        aboutToggle.classList.remove('open');
+        aboutToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
+
+  // Close nav on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
+  });
 </script>
 </body>
 </html>
