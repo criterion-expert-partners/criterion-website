@@ -376,6 +376,37 @@
       flex-wrap: wrap;
     }
 
+    /* Hero image section */
+    .hero-with-image {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      max-width: none;
+      text-align: left;
+      min-height: auto;
+      padding: calc(var(--nav-h) + 60px) 40px 60px;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .hero-with-image .hero-content {
+      max-width: none;
+    }
+
+    .hero-with-image h1 { font-size: clamp(36px, 5vw, 60px); }
+
+    .hero-image {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* ================================
        TRUST STRIP
     ================================ */
@@ -622,6 +653,29 @@
 
     .trust-card-text { font-size: 13px; color: var(--platinum); line-height: 1.67; }
 
+    /* Trust section with image */
+    .trust-section-with-image {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .trust-section-content {
+      flex: 1;
+    }
+
+    .trust-image {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .trust-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* ================================
        CTA BAND
     ================================ */
@@ -772,6 +826,15 @@
 
       .hero { padding: calc(var(--nav-h) + 60px) 24px 60px; }
 
+      .hero-with-image {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+        padding: calc(var(--nav-h) + 60px) 24px 60px;
+      }
+
+      .hero-with-image h1 { text-align: center; }
+
       .trust-strip { padding: 16px 24px; gap: 16px; }
       .trust-label { font-size: 11px; }
 
@@ -797,6 +860,11 @@
       .process-connector { display: none; }
 
       .trust-cards { grid-template-columns: 1fr; }
+
+      .trust-section-with-image {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
 
       .cta-band { padding: 64px 24px; }
 
@@ -868,15 +936,10 @@
 ================================ -->
 <main id="main-content">
 
-  <!-- HERO ------------------------------------------------ -->
-  <section class="hero" aria-labelledby="hero-heading">
+  <!-- HERO WITH IMAGE --------------------------------- -->
+  <section class="hero hero-with-image" aria-labelledby="hero-heading">
     <div class="hero-content">
-
       <h1 id="hero-heading">The Expert Standard.</h1>
-
-      <div class="hero-find">
-        <a href="/start-search.html" class="btn btn-white">Find an Expert &nbsp;→</a>
-      </div>
 
       <p>When case theory depends on who stands at the witness stand, you need more than a search result. Criterion sources, vets, and places precision-matched expert witnesses — nationwide, across every major litigation specialty.</p>
 
@@ -884,7 +947,9 @@
         <a href="/start-search.html" class="btn btn-arctic">Start an expert search</a>
         <a href="/join-panel.html"   class="btn btn-outline">Join the expert panel</a>
       </div>
-
+    </div>
+    <div class="hero-image">
+      <img src="/images/lawyer image.jpg" alt="Professional lawyer in litigation consultation">
     </div>
   </section>
 
@@ -1008,68 +1073,72 @@
     </div>
   </section>
 
-  <!-- TRUST DETAIL ---------------------------------------- -->
+  <!-- TRUST DETAIL WITH IMAGE ------------------------- -->
   <section class="trust-section" aria-labelledby="trust-heading">
-    <div class="container">
+    <div class="container trust-section-with-image">
+      <div class="trust-section-content">
+        <div class="eyebrow">Why Firms Trust Criterion</div>
+        <h2 class="section-title" id="trust-heading">Every expert on the Criterion Panel is fully vetted.</h2>
+        <p class="section-sub">We don't accept applications — we screen them. Every expert undergoes a rigorous qualification process before any case introduction.</p>
 
-      <div class="eyebrow">Why Firms Trust Criterion</div>
-      <h2 class="section-title" id="trust-heading">Every expert on the Criterion Panel is fully vetted.</h2>
-      <p class="section-sub">We don't accept applications — we screen them. Every expert undergoes a rigorous qualification process before any case introduction.</p>
+        <div class="trust-cards">
 
-      <div class="trust-cards">
-
-        <div class="trust-card">
-          <div class="trust-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M4 10l4 4 8-8" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="square"/>
-            </svg>
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10l4 4 8-8" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="square"/>
+              </svg>
+            </div>
+            <div>
+              <div class="trust-card-title">Credential Verification</div>
+              <div class="trust-card-text">Licenses, board certifications, current practice status, and institutional affiliations are verified before panel acceptance and re-checked for each case match.</div>
+            </div>
           </div>
-          <div>
-            <div class="trust-card-title">Credential Verification</div>
-            <div class="trust-card-text">Licenses, board certifications, current practice status, and institutional affiliations are verified before panel acceptance and re-checked for each case match.</div>
+
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="7" stroke="#38BDF8" stroke-width="1.8"/>
+                <path d="M7 10l2 2 4-4" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square"/>
+              </svg>
+            </div>
+            <div>
+              <div class="trust-card-title">Full Background Checks</div>
+              <div class="trust-card-text">Every expert undergoes a thorough background check. Prior adverse findings, disciplinary records, and legal history are reviewed and assessed before any panel acceptance.</div>
+            </div>
           </div>
+
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="4" y="2" width="12" height="16" rx="1" stroke="#38BDF8" stroke-width="1.8"/>
+                <line x1="7" y1="7"  x2="13" y2="7"  stroke="#38BDF8" stroke-width="1.4" stroke-linecap="square"/>
+                <line x1="7" y1="10" x2="13" y2="10" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="square"/>
+                <line x1="7" y1="13" x2="10" y2="13" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="square"/>
+              </svg>
+            </div>
+            <div>
+              <div class="trust-card-title">Confidentiality Agreements</div>
+              <div class="trust-card-text">All panel members are bound by confidentiality agreements. Your case details and client identity are protected at every stage — from first search to final engagement.</div>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2L4 5v6c0 3.5 2.5 6.5 6 7.5 3.5-1 6-4 6-7.5V5L10 2z" stroke="#38BDF8" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="trust-card-title">Secure Data Handling</div>
+              <div class="trust-card-text">Client data and case information are stored and transmitted with security controls. We treat your case file with the same discretion your firm applies to privileged client communications.</div>
+            </div>
+          </div>
+
         </div>
-
-        <div class="trust-card">
-          <div class="trust-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <circle cx="10" cy="10" r="7" stroke="#38BDF8" stroke-width="1.8"/>
-              <path d="M7 10l2 2 4-4" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square"/>
-            </svg>
-          </div>
-          <div>
-            <div class="trust-card-title">Full Background Checks</div>
-            <div class="trust-card-text">Every expert undergoes a thorough background check. Prior adverse findings, disciplinary records, and legal history are reviewed and assessed before any panel acceptance.</div>
-          </div>
-        </div>
-
-        <div class="trust-card">
-          <div class="trust-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <rect x="4" y="2" width="12" height="16" rx="1" stroke="#38BDF8" stroke-width="1.8"/>
-              <line x1="7" y1="7"  x2="13" y2="7"  stroke="#38BDF8" stroke-width="1.4" stroke-linecap="square"/>
-              <line x1="7" y1="10" x2="13" y2="10" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="square"/>
-              <line x1="7" y1="13" x2="10" y2="13" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="square"/>
-            </svg>
-          </div>
-          <div>
-            <div class="trust-card-title">Confidentiality Agreements</div>
-            <div class="trust-card-text">All panel members are bound by confidentiality agreements. Your case details and client identity are protected at every stage — from first search to final engagement.</div>
-          </div>
-        </div>
-
-        <div class="trust-card">
-          <div class="trust-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2L4 5v6c0 3.5 2.5 6.5 6 7.5 3.5-1 6-4 6-7.5V5L10 2z" stroke="#38BDF8" stroke-width="1.8" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <div class="trust-card-title">Secure Data Handling</div>
-            <div class="trust-card-text">Client data and case information are stored and transmitted with security controls. We treat your case file with the same discretion your firm applies to privileged client communications.</div>
-          </div>
-        </div>
-
+      </div>
+      <div class="trust-image">
+        <img src="/images/post meeting handshake.jpg" alt="Professional handshake after successful expert placement">
       </div>
     </div>
   </section>
