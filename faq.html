@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Frequently asked questions about Criterion Expert Partners — for litigation firms seeking expert witnesses and for experts interested in joining the Criterion Panel.">
+  <meta name="description" content="Frequently asked questions about Criterion Expert Partners. Answers for litigation firms and experts considering the platform.">
   <title>FAQ | Criterion Expert Partners</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,9 +30,10 @@
     body  { background: var(--abyss); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a     { text-decoration: none; color: inherit; }
     button{ cursor: pointer; font-family: inherit; }
+    img   { display: block; max-width: 100%; height: auto; }
 
-    .container        { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
-    .container-narrow { max-width: 760px;  margin: 0 auto; padding: 0 40px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 40px; }
 
     .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--arctic); margin-bottom: 16px; }
     .eyebrow::before { content: ''; width: 20px; height: 1.5px; background: var(--arctic); flex-shrink: 0; }
@@ -43,7 +44,7 @@
     .btn-outline { background: transparent; color: var(--arctic); border: 1px solid var(--arctic); }
     .btn-outline:hover { background: var(--a-bg); }
 
-    /* NAV */
+    /* ===== NAV ===== */
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); background: rgba(8,12,24,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; transition: box-shadow 0.3s; }
     .nav.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.32); }
     .nav-logo     { display: flex; align-items: center; gap: 14px; }
@@ -55,138 +56,111 @@
     .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--arctic); transition: width 0.2s; }
     .nav-link:hover { color: var(--white); }
     .nav-link:hover::after { width: 100%; }
-    .nav-link.active { color: var(--white); }
-    .nav-link.active::after { width: 100%; }
-    .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; }
+    .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; border: none; }
     .nav-cta:hover { opacity: 0.88; }
+
+    /* Dropdown styling */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--platinum);
+      font-weight: 400;
+      transition: color 0.18s;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      white-space: nowrap;
+    }
+    .nav-dropdown-toggle:hover { color: var(--white); }
+    .nav-dropdown-toggle::after {
+      content: '▼';
+      font-size: 8px;
+      opacity: 0.6;
+      transition: opacity 0.18s, transform 0.2s;
+    }
+    .nav-dropdown-toggle.open::after {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: -12px;
+      background: rgba(11, 30, 61, 0.98);
+      border: 1px solid var(--steel);
+      border-radius: 8px;
+      padding: 12px 0;
+      min-width: 200px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s, visibility 0.2s;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 300;
+    }
+    .nav-dropdown-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .nav-dropdown-item {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13px;
+      color: var(--platinum);
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .nav-dropdown-item:hover {
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--white);
+    }
+    
     .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; }
     .nav-toggle span { width: 22px; height: 1.5px; background: var(--platinum); display: block; transition: transform 0.28s, opacity 0.28s; }
     .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-    /* HERO */
-    .page-hero { padding: calc(var(--nav-h) + 60px) 0 56px; background: linear-gradient(160deg, var(--abyss) 0%, #0A1830 60%, var(--navy) 100%); border-bottom: 0.5px solid var(--steel); position: relative; overflow: hidden; }
-    .page-hero::before { content: ''; position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 65%); top: -100px; right: -100px; pointer-events: none; }
+    /* ===== PAGE HERO ===== */
+    .page-hero { padding: calc(var(--nav-h) + 80px) 40px 60px; background: linear-gradient(160deg, var(--abyss) 0%, #0A1830 60%, var(--navy) 100%); border-bottom: 0.5px solid var(--steel); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 65%); top: -100px; right: -100px; pointer-events: none; z-index: 0; }
     .page-hero .container { position: relative; z-index: 1; }
-    .page-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(32px,5vw,54px); color: var(--white); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 16px; }
-    .page-hero p  { font-size: 16px; color: var(--platinum); line-height: 1.75; max-width: 560px; }
+    .page-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(36px,5vw,56px); color: var(--white); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 24px; }
+    .page-hero p { font-size: 16px; color: var(--platinum); line-height: 1.75; max-width: 600px; }
 
-    /* FAQ TABS */
-    .faq-area { padding: 72px 0 96px; }
+    /* Tab toggles */
+    .tab-toggles { display: flex; gap: 12px; margin-bottom: 48px; }
+    .tab-btn { padding: 11px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; border: 1px solid var(--steel); background: transparent; color: var(--platinum); cursor: pointer; transition: all 0.2s; }
+    .tab-btn.active { background: var(--arctic); color: var(--abyss); border-color: var(--arctic); }
+    .tab-btn:hover:not(.active) { border-color: var(--arctic); color: var(--white); }
 
-    .faq-tabs { display: flex; gap: 4px; margin-bottom: 48px; background: rgba(11,30,61,0.4); border: 1px solid var(--steel); border-radius: 8px; padding: 4px; width: fit-content; }
+    /* FAQ Content */
+    .faq-section { padding: 96px 0; background: var(--abyss); }
+    .faq-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .faq-item { background: rgba(11,30,61,0.35); border: 1px solid var(--steel); border-radius: 8px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item:hover { border-color: rgba(56,189,248,0.3); }
+    .faq-question { padding: 24px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .faq-q-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; color: var(--white); text-align: left; }
+    .faq-toggle { width: 24px; height: 24px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--arctic); font-size: 18px; font-weight: 200; transition: transform 0.2s; }
+    .faq-item.open .faq-toggle { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 1000px; }
+    .faq-a-text { padding: 0 24px 24px 24px; font-size: 15px; color: var(--platinum); line-height: 1.8; }
 
-    .faq-tab {
-      padding: 10px 24px;
-      border-radius: 5px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--platinum);
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      transition: background 0.18s, color 0.18s;
-    }
+    /* ===== CTA BAND ===== */
+    .cta-band { padding: 88px 0; background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel); text-align: center; }
+    .cta-band h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px,3vw,38px); color: var(--white); letter-spacing: -0.01em; margin-bottom: 16px; line-height: 1.15; }
+    .cta-band p  { font-size: 15px; color: var(--platinum); line-height: 1.75; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-band-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
-    .faq-tab.active {
-      background: var(--arctic);
-      color: var(--abyss);
-    }
-
-    .faq-tab:not(.active):hover { color: var(--white); }
-
-    /* FAQ PANELS */
-    .faq-panel { display: none; }
-    .faq-panel.active { display: block; }
-
-    .faq-group { margin-bottom: 48px; }
-    .faq-group:last-child { margin-bottom: 0; }
-
-    .faq-group-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--arctic);
-      margin-bottom: 4px;
-      padding-bottom: 16px;
-      border-bottom: 0.5px solid var(--border);
-    }
-
-    /* ACCORDION */
-    .faq-item { border-bottom: 0.5px solid var(--border); }
-    .faq-item:last-child { border-bottom: none; }
-
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 22px 0;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 20px;
-      cursor: pointer;
-      text-align: left;
-    }
-
-    .faq-q-text {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      color: var(--white);
-      line-height: 1.4;
-      flex: 1;
-      transition: color 0.18s;
-    }
-
-    .faq-question:hover .faq-q-text { color: var(--arctic); }
-
-    .faq-icon {
-      width: 22px; height: 22px;
-      border-radius: 50%;
-      border: 1px solid var(--steel);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      color: var(--arctic);
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1;
-      transition: background 0.18s, border-color 0.18s, transform 0.25s;
-      margin-top: 1px;
-    }
-
-    .faq-item.open .faq-icon {
-      background: var(--a-bg);
-      border-color: var(--arctic);
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.32s ease, padding 0.32s ease;
-    }
-
-    .faq-item.open .faq-answer { max-height: 600px; }
-
-    .faq-answer-inner {
-      padding-bottom: 22px;
-      font-size: 14px;
-      color: var(--platinum);
-      line-height: 1.75;
-    }
-
-    .faq-answer-inner a { color: var(--arctic); text-decoration: underline; text-underline-offset: 2px; }
-
-    /* CTA BAND */
-    .cta-band { padding: 80px 40px; background: var(--navy); border-top: 0.5px solid var(--steel); text-align: center; }
-    .cta-band h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(22px,3vw,34px); color: var(--white); letter-spacing: -0.01em; margin-bottom: 14px; }
-    .cta-band p  { font-size: 15px; color: var(--platinum); line-height: 1.75; max-width: 480px; margin: 0 auto 28px; }
-    .cta-band-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     .footer { background: var(--abyss); border-top: 0.5px solid var(--steel); padding: 56px 0 32px; }
     .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 0.5px solid var(--steel); }
     .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
@@ -203,34 +177,48 @@
     .footer-legal a:hover { color: var(--platinum); }
     .footer-trust-note { font-size: 11px; color: var(--muted); text-align: right; }
 
-    /* RESPONSIVE */
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .container, .container-narrow { padding: 0 24px; }
       .nav { padding: 0 24px; }
       .nav-links { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--abyss); padding: 24px; flex-direction: column; align-items: flex-start; gap: 20px; border-bottom: 0.5px solid var(--steel); z-index: 190; }
       .nav-links.open { display: flex; }
       .nav-toggle { display: flex; }
-      .faq-tabs { width: 100%; }
-      .faq-tab  { flex: 1; text-align: center; }
+      .nav-dropdown-menu {
+        position: static;
+        background: rgba(27, 52, 96, 0.6);
+        border: none;
+        border-radius: 0;
+        padding: 12px 0 12px 20px;
+        margin-top: 0;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+      .nav-dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .page-hero { padding: calc(var(--nav-h) + 60px) 24px 60px; }
+      .faq-section { padding: 72px 0; }
+      .cta-band { padding: 64px 0; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
       .footer-trust-note { text-align: left; }
-      .cta-band { padding: 64px 24px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { transition-duration: 0.01ms !important; }
-      .faq-answer { transition: none; }
       html { scroll-behavior: auto; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ===== NAV ===== -->
 <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo" aria-label="Criterion Expert Partners — Home">
-    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" aria-hidden="true" focusable="false">
+  <a href="/" class="nav-logo" aria-label="Criterion Expert Partners — Home">
+    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
       <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
       <line x1="30" y1="4"  x2="30" y2="0"  stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
       <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
@@ -241,27 +229,37 @@
       <span class="nav-sub">Expert Partners</span>
     </div>
   </a>
-  <div class="nav-links" id="nav-links">
-    <a href="services.html"     class="nav-link">Services</a>
-    <a href="how-it-works.html" class="nav-link">How It Works</a>
-        <div class="nav-dropdown" id="about-dd">
-      <button class="nav-dd-btn active" aria-haspopup="true" aria-expanded="false">About <span class="nav-dd-arrow" aria-hidden="true">›</span></button>
-      <div class="nav-dd-menu" role="menu">
-        <a href="about.html" class="nav-dd-item" role="menuitem">About Criterion</a>
-        <a href="faq.html"   class="nav-dd-item active"  role="menuitem">FAQ</a>
+
+  <div class="nav-links" id="nav-links" role="menu">
+    <a href="/services.html"      class="nav-link" role="menuitem">Services</a>
+    <a href="/how-it-works.html"  class="nav-link" role="menuitem">How It Works</a>
+    
+    <!-- About Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle" id="about-toggle" aria-label="About menu" aria-expanded="false">
+        About
+      </button>
+      <div class="nav-dropdown-menu" id="about-menu" role="menu">
+        <a href="/about.html" class="nav-dropdown-item" role="menuitem">About Criterion</a>
+        <a href="/faq.html" class="nav-dropdown-item" role="menuitem">FAQ</a>
       </div>
     </div>
-    <a href="contact.html"      class="nav-link">Contact</a>
-    <a href="start-search.html" class="nav-cta">Find an Expert</a>
+    
+    <a href="/contact.html"       class="nav-link" role="menuitem">Contact</a>
+    <a href="/start-search.html"  class="nav-cta"  role="menuitem">Find an Expert</a>
   </div>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+
+  <button class="nav-toggle" id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-links">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <main id="main-content">
 
-  <!-- HERO -->
+  <!-- PAGE HERO -->
   <section class="page-hero" aria-labelledby="page-heading">
     <div class="container">
       <h1 id="page-heading">Frequently Asked Questions</h1>
@@ -269,264 +267,147 @@
     </div>
   </section>
 
-  <!-- FAQ AREA -->
-  <section class="faq-area">
-    <div class="container">
-
-      <!-- TABS -->
-      <div class="faq-tabs" role="tablist" aria-label="FAQ sections">
-        <button class="faq-tab active" id="tab-firms" role="tab" aria-selected="true" aria-controls="panel-firms">For Law Firms</button>
-        <button class="faq-tab" id="tab-experts" role="tab" aria-selected="false" aria-controls="panel-experts">For Experts</button>
+  <!-- FAQ SECTION -->
+  <section class="faq-section" aria-label="Frequently asked questions">
+    <div class="container-narrow">
+      <div class="tab-toggles">
+        <button class="tab-btn active" data-tab="law-firms">For Law Firms</button>
+        <button class="tab-btn" data-tab="experts">For Experts</button>
       </div>
 
-      <!-- LAW FIRMS PANEL -->
-      <div class="faq-panel active" id="panel-firms" role="tabpanel" aria-labelledby="tab-firms">
-
-        <div class="faq-group">
-          <div class="faq-group-label">The Search Process</div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How quickly can you find an expert for my case?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Most case requests receive pre-vetted expert candidate profiles within 24–48 hours of submission. Urgent requests — where disclosure deadlines or deposition dates are imminent — can often be expedited. Note your timeline clearly in the case intake form and we will prioritize accordingly.</div>
-            </div>
+      <!-- LAW FIRMS TAB -->
+      <div class="faq-grid" id="law-firms" role="region" aria-labelledby="law-firms">
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">How quickly can you find an expert for my case?</div>
+            <div class="faq-toggle" aria-hidden="true">+</div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How is Criterion different from an expert witness directory?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">A directory returns whoever has listed themselves in the right category. Criterion conducts an active search — specific to your case, jurisdiction, and theory of liability. Every candidate is conflict-checked, credential-verified, and screened for Daubert readiness before their profile reaches you. The result is a curated shortlist, not a search result you have to call through yourself.</div>
-            </div>
+          <div class="faq-answer" role="region">
+            <div class="faq-a-text">We commit to delivering expert profiles within 24–48 hours of case submission. Our first response to your initial inquiry is within 1 business day. Speed depends on case specificity and expert availability in your specialty, but we prioritize active cases with clear deadlines.</div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How many expert candidates will I receive?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Typically two to three pre-vetted profiles per search. We present candidates who genuinely match the case requirements rather than a longer list of marginal options. If the first round of candidates does not result in a match, we search again at no additional charge.</div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">What specialties and practice areas does Criterion cover?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Criterion sources expert witnesses across all major litigation specialties — medical malpractice, personal injury, construction defect, intellectual property, commercial litigation, environmental, real estate, engineering, and more. In addition to expert witness placement, we provide peer review and record analysis, independent medical examinations, bill review, and site and facility inspections. If your case requires a specialist, submit it and we will tell you whether it is something we can source.</div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Can Criterion handle multiple searches across different cases simultaneously?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Yes. Firms with ongoing expert needs across multiple active matters can submit multiple case requests. Each is handled independently with its own search and candidate set. Firms with regular volume may benefit from a retainer arrangement — contact us to discuss.</div>
-            </div>
-          </div>
-
         </div>
 
-        <div class="faq-group">
-          <div class="faq-group-label">Expert Vetting &amp; Standards</div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How are experts screened and vetted?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Every expert on the Criterion Panel undergoes credential verification — licenses, board certifications, current practice status, and institutional affiliations — as well as a full background check and conflict-of-interest screening before acceptance. For each case match, we re-verify availability and run conflict screening against the specific case parties before presenting a candidate.</div>
-            </div>
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">How is Criterion different from an expert witness directory?</div>
+            <div class="faq-a-text">Expert directories are static lists. Criterion is an active search service. We don't pull your expert from a database. We conduct a case-specific search of our Panel, run conflict and credential screening, and deliver vetted candidates who match your exact needs — not just checkbox specialties.</div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How does Criterion screen for Daubert readiness?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">For each candidate we present, we evaluate current active practice status, prior testimony history, publication record, and any prior exclusion findings or adverse Daubert rulings. These factors are assessed in the context of your specific case — an expert who would survive challenge in one matter may not in another. We flag known risk factors in the candidate profile before you make a selection.</div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Do Criterion experts have prior testimony experience?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Experience varies. Some panel members have extensive deposition and trial testimony records; others are active practitioners with strong clinical or technical credentials but limited prior testimony. We disclose experience level clearly in every candidate profile. First-time witnesses are only presented when their credentials and case fit justify it — and we note it explicitly so you can make an informed decision.</div>
-            </div>
-          </div>
-
         </div>
 
-        <div class="faq-group">
-          <div class="faq-group-label">Confidentiality &amp; Data Security</div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Is my case information kept confidential?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Yes. All case details and client information are handled under strict confidentiality and secure data controls. Case information is used solely to conduct the expert search and is not shared beyond what is necessary to identify and evaluate candidates. All panel members are bound by confidentiality agreements.</div>
-            </div>
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">How many expert candidates will I receive?</div>
+            <div class="faq-a-text">You'll typically receive 1–3 pre-vetted candidate profiles for your case. Each profile includes full CV, practice summary, relevant experience, rates, and availability. If none of the initial candidates fit, we can conduct a second search at no additional charge.</div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Will the experts I consult be disclosed as consulting experts?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Whether a consulting expert must be disclosed depends on the applicable jurisdiction rules and how the attorney uses that expert. Criterion does not dictate expert strategy. For peer review and record analysis engagements specifically, the reviewer is not introduced to opposing counsel and their identity remains confidential unless and until you choose to retain them as a testifying expert.</div>
-            </div>
-          </div>
-
         </div>
 
-        <div class="faq-group">
-          <div class="faq-group-label">Pricing &amp; Engagement</div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How is pricing structured?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Pricing varies by service and engagement scope. Expert search and placement, peer review, IME coordination, bill review, and site inspections are each priced based on the specifics of the matter. Firms with recurring expert needs may be better served by a retainer arrangement. Contact us directly at <a href="mailto:contact@criterionexpertpartners.com">contact@criterionexpertpartners.com</a> for a quote specific to your situation.</div>
-            </div>
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">What specialties and practice areas does Criterion cover?</div>
+            <div class="faq-a-text">Our Panel spans medical, surgical, dental, psychological, engineering, construction, financial, accounting, and business disciplines. Within medicine alone, we source experts across all major specialties and subspecialties. Contact us with your case details to confirm we can support your specific area of need.</div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">What happens if the first expert presented does not work out?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">If a candidate does not work out — due to scheduling conflict, a newly discovered issue, or a mismatch that becomes clear after the initial introduction — Criterion searches again. We do not consider a placement complete until the expert is successfully engaged on the case.</div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Can Criterion coordinate multiple services for the same case?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Yes. Peer review, IME, and bill review are frequently coordinated concurrently for the same matter. Submit your case and note all the services you anticipate needing — we will coordinate across them as a single engagement rather than requiring separate intake for each.</div>
-            </div>
-          </div>
-
         </div>
 
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">Can Criterion handle multiple searches across different cases simultaneously?</div>
+            <div class="faq-a-text">Yes. We support firms managing multiple cases and expert searches in parallel. You can submit searches for different cases with different deadlines, and we manage each search independently while maintaining continuity of communication.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">Do you conduct background checks on your experts?</div>
+            <div class="faq-a-text">Every expert on the Criterion Panel undergoes a full background check. We verify credentials, check for prior adverse findings or disciplinary actions, and review litigation history before any panel acceptance. Conflict-of-interest screening is also run for each case match.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">How do you handle expert conflicts of interest?</div>
+            <div class="faq-a-text">Conflict screening is part of our selection process. We confirm that all introduced experts have no material conflicts with your case, opposing parties, or prior litigation. This vetting happens before introduction — you are never surprised by a conflict issue.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">What happens after I select an expert?</div>
+            <div class="faq-a-text">We introduce you directly to the expert and step back. You and your expert work directly from that point forward. We remain available for logistics, scheduling support, additional expert needs on the same case, or any coordination issues that arise.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">How is your service priced?</div>
+            <div class="faq-a-text">We take a markup on expert hourly rates. The expert's engagement terms (hourly rate, retainer, project fee) are disclosed transparently in their profile before introduction. There are no hidden fees, research charges, or additional Criterion markup beyond the stated rate.</div>
+          </div>
+        </div>
       </div>
 
-      <!-- EXPERTS PANEL -->
-      <div class="faq-panel" id="panel-experts" role="tabpanel" aria-labelledby="tab-experts">
-
-        <div class="faq-group">
-          <div class="faq-group-label">Joining the Panel</div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How do I apply to join the Criterion Panel?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Submit an expert application through the <a href="join-panel.html">Join the Panel</a> page. You will need to provide your credentials, specialty, current practice information, prior expert witness experience, fee structure, and a link to your CV. Applications are reviewed within 2–3 business days.</div>
-            </div>
+      <!-- EXPERTS TAB -->
+      <div class="faq-grid" id="experts" role="region" aria-labelledby="experts" style="display: none;">
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">What qualifies an expert to join the Criterion Panel?</div>
+            <div class="faq-a-text">You should have active practice credentials, board certification (if applicable), a clean disciplinary record, and litigation experience or willingness to develop it. You don't need to be a "career expert" — many of our panelists maintain primary practices while taking selective cases through Criterion.</div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">What does the vetting process involve?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">All applicants undergo credential verification — licenses, board certifications, and institutional affiliations — followed by a thorough background check. If accepted to the panel, you will be asked to sign a standard confidentiality and panel participation agreement before receiving case opportunities.</div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Do I need prior expert witness experience to apply?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">No. Criterion works with practitioners across all experience levels, including those with no prior testimony experience. Active clinical or technical practice, current licensure, and strong credentials in the relevant specialty are the primary criteria. Limited testimony experience is disclosed to attorneys but is not automatically disqualifying.</div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Is panel membership exclusive?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">No. Panel membership does not require exclusivity. You remain free to accept expert witness engagements through other channels. Criterion simply asks that you honor availability commitments made through cases we introduce.</div>
-            </div>
-          </div>
-
         </div>
 
-        <div class="faq-group">
-          <div class="faq-group-label">Case Opportunities &amp; Engagement</div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How often will I receive case opportunities?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Frequency depends on your specialty, the demand for that specialty across active cases, and your stated availability. Specialists in high-demand areas — medical malpractice, personal injury, construction defect — typically receive more frequent opportunities. You control your availability status and can update it at any time.</div>
-            </div>
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">How is the Criterion Panel different from expert witness marketplaces?</div>
+            <div class="faq-a-text">We don't operate as a passive marketplace where you post a profile and wait for calls. Criterion is a curated panel. We actively source cases that match your practice and expertise. We handle vetting, conflict screening, case matching, and initial logistics so you can focus on your practice and the expert work itself.</div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Will I negotiate directly with attorneys?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Criterion handles initial case communication, conflict screening, and the introduction to the attorney. Once engaged on a case, you will work directly with the attorney for case-specific coordination, strategy, and scheduling. Criterion remains available as a support resource throughout the engagement.</div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">How are my fees handled?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">You set your own rates. Your stated fee structure is disclosed to the attorney as part of the candidate profile. Fee arrangements — retainer, hourly rate, deposition and trial rates — are negotiated directly between you and the attorney after the introduction is made. Criterion does not take a fee from the expert side of the engagement.</div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">Is my application and panel membership kept confidential?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Yes. Application information is used solely for panel evaluation and is not shared with attorneys or third parties. Your profile is only presented to an attorney in the context of a specific case match, and only after conflict screening has been completed for that matter.</div>
-            </div>
-          </div>
-
         </div>
 
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">Do I have to commit to a minimum number of cases per year?</div>
+            <div class="faq-a-text">No minimum commitments. You control your availability and case load. Some panel members take one or two cases a year; others take several per month. You decide what works for your practice and schedule, and we respect those boundaries.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">What is the panel acceptance process like?</div>
+            <div class="faq-a-text">Submit your credentials and CV through our application form. We review your background, verify credentials with licensing boards, conduct a background check, and conduct a brief phone conversation to assess fit and expectations. The process typically takes 2–3 business days. All applicants undergo credential verification — acceptance is not automatic.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">Can I set my own rates?</div>
+            <div class="faq-a-text">Yes. You set your hourly rate, retainer requirements, and project fees. These terms are included in your expert profile and disclosed to law firms before any introduction. We take a markup on your rates, but your compensation is transparent and set by you.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">Can I decline a case?</div>
+            <div class="faq-a-text">Absolutely. You can decline any case introduction for any reason — conflict, schedule, subject matter, or just not interested. Declining cases does not affect your panel membership or future introductions.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">Is my panel membership confidential?</div>
+            <div class="faq-a-text">Your participation on the Criterion Panel is confidential unless you choose to disclose it. Your expert profile is seen only by law firms requesting cases in your specialty, and case details are protected by confidentiality agreements binding all parties.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">How do you handle case scheduling and logistics?</div>
+            <div class="faq-a-text">We coordinate the initial scheduling and case logistics. After introduction, you work directly with the law firm. But our case managers remain available if you need support with deadlines, document flow, report submission, or any coordination issues that arise during the engagement.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q-text">Can I start with evaluations only and move to testimony later?</div>
+            <div class="faq-a-text">Yes. Many panel members start with peer reviews or record analysis before taking on testimony work. You control the depth of your involvement in each case, and Criterion supports that progression as your comfort and availability grow.</div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -535,16 +416,16 @@
   <!-- CTA BAND -->
   <section class="cta-band" aria-labelledby="cta-heading">
     <h2 id="cta-heading">Still have questions?</h2>
-    <p>Contact us directly and we'll get back to you within 1 business day.</p>
+    <p>Reach out directly. We're here to answer anything about Criterion and how we can support your firm or your expert practice.</p>
     <div class="cta-band-btns">
-      <a href="contact.html"      class="btn btn-arctic">Contact us</a>
-      <a href="start-search.html" class="btn btn-outline">Start an expert search</a>
+      <a href="/contact.html" class="btn btn-arctic">Contact us</a>
+      <a href="/join-panel.html"   class="btn btn-outline">Apply to join the panel</a>
     </div>
   </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
@@ -563,107 +444,125 @@
       <div>
         <div class="footer-col-label">Services</div>
         <ul class="footer-links">
-          <li><a href="services/expert-search.html">Start an Expert Search</a></li>
-          <li><a href="services/peer-review.html">Peer Review &amp; Record Analysis</a></li>
-          <li><a href="services/ime.html">Independent Medical Examinations</a></li>
-          <li><a href="services/bill-review.html">Bill Review</a></li>
-          <li><a href="services/site-inspections.html">Site &amp; Facility Inspections</a></li>
+          <li><a href="/services/expert-search.html">Start an Expert Search</a></li>
+          <li><a href="/services/peer-review.html">Peer Review &amp; Record Analysis</a></li>
+          <li><a href="/services/ime.html">Independent Medical Examinations</a></li>
+          <li><a href="/services/bill-review.html">Bill Review</a></li>
+          <li><a href="/services/site-inspections.html">Site &amp; Facility Inspections</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-label">Firm</div>
         <ul class="footer-links">
-          <li><a href="how-it-works.html">How It Works</a></li>
-          <li><a href="about.html">About Criterion</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="join-panel.html">Join the Expert Panel</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/how-it-works.html">How It Works</a></li>
+          <li><a href="/about.html">About Criterion</a></li>
+          <li><a href="/join-panel.html">Join the Expert Panel</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-legal">
         <span>&copy; 2026 Criterion Expert Partners. All rights reserved.</span>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
       </div>
       <div class="footer-trust-note">All experts background-checked, credential-verified, and confidentiality bound.</div>
     </div>
   </div>
 </footer>
 
+<!-- ===== SCRIPTS ===== -->
 <script>
-  // Nav
   const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
-  const toggle = document.getElementById('nav-toggle');
-  const links  = document.getElementById('nav-links');
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  const toggle   = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', function () {
+    const open = navLinks.classList.toggle('open');
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
   });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
-  }));
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && links.classList.contains('open')) {
-      links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.focus();
+
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const aboutToggle = document.getElementById('about-toggle');
+  const aboutMenu = document.getElementById('about-menu');
+
+  if (aboutToggle && aboutMenu) {
+    aboutToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const isOpen = aboutMenu.classList.toggle('open');
+      aboutToggle.classList.toggle('open', isOpen);
+      aboutToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        aboutMenu.classList.remove('open');
+        aboutToggle.classList.remove('open');
+        aboutToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && aboutMenu.classList.contains('open')) {
+        aboutMenu.classList.remove('open');
+        aboutToggle.classList.remove('open');
+        aboutToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
     }
   });
 
-  // FAQ Tabs
-  const tabs   = document.querySelectorAll('.faq-tab');
-  const panels = document.querySelectorAll('.faq-panel');
+  // Tab switching
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const faqGrids = document.querySelectorAll('.faq-grid');
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.getAttribute('aria-controls');
-      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-      panels.forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected','true');
-      document.getElementById(target).classList.add('active');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabName = btn.getAttribute('data-tab');
+      tabBtns.forEach(b => b.classList.remove('active'));
+      faqGrids.forEach(grid => grid.style.display = 'none');
+      btn.classList.add('active');
+      document.getElementById(tabName).style.display = 'grid';
     });
   });
 
-  // FAQ Accordion
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item     = btn.closest('.faq-item');
-      const isOpen   = item.classList.contains('open');
-      const expanded = !isOpen;
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.closest('.faq-item');
+      item.classList.toggle('open');
+      question.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
 
-      // Close all in this panel
-      btn.closest('.faq-panel').querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-question').setAttribute('aria-expanded','false');
-      });
-
-      if (!isOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        question.click();
       }
     });
   });
-
-  // About nav dropdown
-  const aboutDd = document.getElementById('about-dd');
-  if (aboutDd) {
-    const ddBtn = aboutDd.querySelector('.nav-dd-btn');
-    aboutDd.addEventListener('click', e => e.stopPropagation());
-    ddBtn.addEventListener('click', () => {
-      const isOpen = aboutDd.classList.toggle('open');
-      ddBtn.setAttribute('aria-expanded', String(isOpen));
-    });
-    document.addEventListener('click', () => {
-      aboutDd.classList.remove('open');
-      if (ddBtn) ddBtn.setAttribute('aria-expanded', 'false');
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { aboutDd.classList.remove('open'); if (ddBtn) ddBtn.setAttribute('aria-expanded','false'); }
-    });
-  }
 </script>
+
 </body>
 </html>
