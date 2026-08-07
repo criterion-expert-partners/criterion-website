@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Criterion Expert Partners offers five expert services: expert witness searches, peer review, IME coordination, bill review, and site inspections. Case-specific matching for all litigation needs.">
   <title>Services | Criterion Expert Partners</title>
- 
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
- 
+
   <style>
     :root {
       --abyss:    #080C18;
@@ -24,20 +24,20 @@
       --a-bd:     rgba(56,189,248,0.22);
       --nav-h:    68px;
     }
- 
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html  { scroll-behavior: smooth; }
     body  { background: var(--abyss); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a     { text-decoration: none; color: inherit; }
     button{ cursor: pointer; font-family: inherit; }
     img   { display: block; max-width: 100%; height: auto; }
- 
+
     .container        { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
     .container-narrow { max-width: 720px;  margin: 0 auto; padding: 0 40px; }
- 
+
     .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--arctic); margin-bottom: 16px; }
     .eyebrow::before { content: ''; width: 20px; height: 1.5px; background: var(--arctic); flex-shrink: 0; }
- 
+
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 6px; font-size: 14px; font-weight: 600; border: none; transition: opacity 0.18s; white-space: nowrap; }
     .btn-arctic  { background: var(--arctic); color: var(--abyss); }
     .btn-arctic:hover { opacity: 0.88; }
@@ -45,7 +45,7 @@
     .btn-outline:hover { background: var(--a-bg); }
     .btn-ghost { background: none; border: none; color: var(--arctic); font-size: 14px; font-weight: 600; transition: opacity 0.18s; }
     .btn-ghost:hover { opacity: 0.88; }
- 
+
     /* ===== NAV ===== */
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); background: rgba(8,12,24,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; transition: box-shadow 0.3s; }
     .nav.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.32); }
@@ -60,7 +60,7 @@
     .nav-link:hover::after { width: 100%; }
     .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; border: none; }
     .nav-cta:hover { opacity: 0.88; }
- 
+
     /* Dropdown styling */
     .nav-dropdown { position: relative; }
     .nav-dropdown-toggle {
@@ -129,7 +129,7 @@
     .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
- 
+
     /* ===== PAGE HERO ===== */
     .page-hero { padding: calc(var(--nav-h) + 60px) 40px 60px; background: linear-gradient(160deg, var(--abyss) 0%, #0A1830 60%, var(--navy) 100%); border-bottom: 0.5px solid var(--steel); position: relative; overflow: hidden; }
     .page-hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 65%); top: -100px; right: -100px; pointer-events: none; z-index: 0; }
@@ -139,13 +139,13 @@
     .page-hero-image img { width: 100%; height: auto; }
     .page-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(36px,5vw,60px); color: var(--white); line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 28px; }
     .page-hero p { font-size: 16px; color: var(--platinum); line-height: 1.75; max-width: 580px; }
- 
+
     /* Trust strip */
     .trust-strip { background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel); padding: 18px 40px; display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; }
     .trust-item { display: flex; align-items: center; gap: 9px; }
     .trust-check { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--arctic); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--arctic); font-size: 9px; font-weight: 700; }
     .trust-label { font-size: 12px; font-weight: 500; color: var(--platinum); }
- 
+
     /* Services List */
     .services-list { padding: 96px 0; background: var(--abyss); }
     .svc-row { display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: start; padding-bottom: 56px; margin-bottom: 56px; border-bottom: 0.5px solid var(--border); }
@@ -165,7 +165,7 @@
     .use-case-list li { font-size: 14px; color: var(--platinum); line-height: 1.6; padding-left: 16px; position: relative; }
     .use-case-list li::before { content: '•'; position: absolute; left: 0; color: var(--arctic); }
     .svc-cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
- 
+
     /* Guidance */
     .guidance-section { padding: 96px 0; background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel); }
     .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(24px,3vw,36px); color: var(--white); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 24px; }
@@ -176,13 +176,13 @@
     .guidance-card-a { font-size: 14px; color: var(--platinum); line-height: 1.7; margin-bottom: 18px; }
     .guidance-link { font-size: 13px; color: var(--arctic); font-weight: 600; transition: opacity 0.18s; }
     .guidance-link:hover { opacity: 0.88; }
- 
+
     /* ===== CTA BAND ===== */
     .cta-band { padding: 88px 0; background: var(--abyss); border-top: 0.5px solid var(--steel); text-align: center; }
     .cta-band h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px,3vw,38px); color: var(--white); letter-spacing: -0.01em; margin-bottom: 16px; line-height: 1.15; }
     .cta-band p  { font-size: 15px; color: var(--platinum); line-height: 1.75; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; }
     .cta-band-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
- 
+
     /* ===== FOOTER ===== */
     .footer { background: var(--abyss); border-top: 0.5px solid var(--steel); padding: 56px 0 32px; }
     .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 0.5px solid var(--steel); }
@@ -199,7 +199,7 @@
     .footer-legal a { color: var(--muted); transition: color 0.18s; }
     .footer-legal a:hover { color: var(--platinum); }
     .footer-trust-note { font-size: 11px; color: var(--muted); text-align: right; }
- 
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .container, .container-narrow { padding: 0 24px; }
@@ -231,7 +231,7 @@
       .footer-bottom { flex-direction: column; align-items: flex-start; }
       .footer-trust-note { text-align: left; }
     }
- 
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { transition-duration: 0.01ms !important; }
       html { scroll-behavior: auto; }
@@ -239,7 +239,7 @@
   </style>
 </head>
 <body>
- 
+
 <!-- ===== NAV ===== -->
 <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="Criterion Expert Partners — Home">
@@ -254,7 +254,7 @@
       <span class="nav-sub">Expert Partners</span>
     </div>
   </a>
- 
+
   <div class="nav-links" id="nav-links" role="menu">
     <a href="/services.html"      class="nav-link" role="menuitem">Services</a>
     <a href="/how-it-works.html"  class="nav-link" role="menuitem">How It Works</a>
@@ -273,7 +273,7 @@
     <a href="/contact.html"       class="nav-link" role="menuitem">Contact</a>
     <a href="/start-search.html"  class="nav-cta"  role="menuitem">Find an Expert</a>
   </div>
- 
+
   <button class="nav-toggle" id="nav-toggle"
           aria-label="Toggle navigation menu"
           aria-expanded="false"
@@ -281,9 +281,9 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
- 
+
 <main id="main-content">
- 
+
   <!-- PAGE HERO WITH IMAGE -->
   <section class="page-hero" aria-labelledby="page-heading">
     <div class="page-hero-inner">
@@ -293,11 +293,11 @@
         <p>Every service is delivered through active, case-specific matching — not a static directory query. Click any service for full detail, typical use cases, and how to request it.</p>
       </div>
       <div class="page-hero-image">
-        <img src="/images/lawyer_image.jpg" alt="Lawyers">
+        <img src="/images/post-meeting-handshake.jpg" alt="Professional handshake after successful expert placement">
       </div>
     </div>
   </section>
- 
+
   <!-- TRUST STRIP -->
   <div class="trust-strip">
     <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Rigorously screened experts</span></div>
@@ -305,11 +305,11 @@
     <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Confidentiality bound</span></div>
     <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Secure client data</span></div>
   </div>
- 
+
   <!-- SERVICES LIST -->
   <section class="services-list" aria-label="Our services">
     <div class="container">
- 
+
       <!-- 01 Expert Search -->
       <div class="svc-row">
         <div class="svc-row-label">
@@ -335,7 +335,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- 02 Peer Review -->
       <div class="svc-row">
         <div class="svc-row-label">
@@ -360,7 +360,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- 03 IME -->
       <div class="svc-row">
         <div class="svc-row-label">
@@ -384,7 +384,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- 04 Bill Review -->
       <div class="svc-row">
         <div class="svc-row-label">
@@ -408,7 +408,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- 05 Site Inspections -->
       <div class="svc-row">
         <div class="svc-row-label">
@@ -432,10 +432,10 @@
           </div>
         </div>
       </div>
- 
+
     </div>
   </section>
- 
+
   <!-- GUIDANCE -->
   <section class="guidance-section" aria-labelledby="guidance-heading">
     <div class="container">
@@ -461,7 +461,7 @@
       </div>
     </div>
   </section>
- 
+
   <!-- CTA BAND -->
   <section class="cta-band" aria-labelledby="cta-heading">
     <h2 id="cta-heading">Ready to submit a case?</h2>
@@ -471,9 +471,9 @@
       <a href="/join-panel.html"   class="btn btn-outline">Join the expert panel</a>
     </div>
   </section>
- 
+
 </main>
- 
+
 <!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
   <div class="container">
@@ -520,23 +520,23 @@
     </div>
   </div>
 </footer>
- 
+
 <!-- ===== SCRIPTS ===== -->
 <script>
   const nav = document.getElementById('main-nav');
   window.addEventListener('scroll', function () {
     nav.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
- 
+
   const toggle   = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
- 
+
   toggle.addEventListener('click', function () {
     const open = navLinks.classList.toggle('open');
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
   });
- 
+
   navLinks.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       navLinks.classList.remove('open');
@@ -544,10 +544,10 @@
       toggle.setAttribute('aria-expanded', 'false');
     });
   });
- 
+
   const aboutToggle = document.getElementById('about-toggle');
   const aboutMenu = document.getElementById('about-menu');
- 
+
   if (aboutToggle && aboutMenu) {
     aboutToggle.addEventListener('click', function (e) {
       e.preventDefault();
@@ -555,7 +555,7 @@
       aboutToggle.classList.toggle('open', isOpen);
       aboutToggle.setAttribute('aria-expanded', String(isOpen));
     });
- 
+
     document.addEventListener('click', function (e) {
       if (!e.target.closest('.nav-dropdown')) {
         aboutMenu.classList.remove('open');
@@ -563,7 +563,7 @@
         aboutToggle.setAttribute('aria-expanded', 'false');
       }
     });
- 
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && aboutMenu.classList.contains('open')) {
         aboutMenu.classList.remove('open');
@@ -572,7 +572,7 @@
       }
     });
   }
- 
+
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && navLinks.classList.contains('open')) {
       navLinks.classList.remove('open');
@@ -582,7 +582,7 @@
     }
   });
 </script>
- 
+
 </body>
 </html>
 
