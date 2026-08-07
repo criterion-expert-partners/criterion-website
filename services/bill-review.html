@@ -3,142 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bill review services for litigation firms. When billed charges drive claim value, Criterion matches you with a bill review professional whose experience fits your file. Nationwide.">
+  <meta name="description" content="Bill Review services from Criterion Expert Partners. Expert analysis of medical billing in high-damage personal injury and medical malpractice litigation.">
   <title>Bill Review | Criterion Expert Partners</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --abyss:    #080C18;
-      --navy:     #0B1E3D;
-      --steel:    #1B3460;
-      --platinum: #B4B9C8;
-      --arctic:   #38BDF8;
-      --white:    #F4F6FB;
-      --muted:    #5B6A88;
-      --border:   rgba(180,185,200,0.12);
-      --a-bg:     rgba(56,189,248,0.07);
-      --a-bd:     rgba(56,189,248,0.22);
-      --nav-h:    68px;
-    }
-
+    :root { --abyss: #080C18; --navy: #0B1E3D; --steel: #1B3460; --platinum: #B4B9C8; --arctic: #38BDF8; --white: #F4F6FB; --muted: #5B6A88; --border: rgba(180,185,200,0.12); --a-bg: rgba(56,189,248,0.07); --a-bd: rgba(56,189,248,0.22); --nav-h: 68px; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html  { scroll-behavior: smooth; }
-    body  { background: var(--abyss); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    a     { text-decoration: none; color: inherit; }
-    button{ cursor: pointer; font-family: inherit; }
-
-    .container        { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
-    .container-narrow { max-width: 760px;  margin: 0 auto; padding: 0 40px; }
-
+    html { scroll-behavior: smooth; }
+    body { background: var(--abyss); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: inherit; }
+    img { display: block; max-width: 100%; height: auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 40px; }
     .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--arctic); margin-bottom: 16px; }
     .eyebrow::before { content: ''; width: 20px; height: 1.5px; background: var(--arctic); flex-shrink: 0; }
-
-    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px,3vw,38px); color: var(--white); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 18px; }
-    .section-sub   { font-size: 15px; color: var(--platinum); line-height: 1.75; max-width: 580px; margin-bottom: 48px; }
-
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 6px; font-size: 14px; font-weight: 600; border: none; transition: opacity 0.18s; white-space: nowrap; }
-    .btn-arctic  { background: var(--arctic); color: var(--abyss); }
+    .btn-arctic { background: var(--arctic); color: var(--abyss); }
     .btn-arctic:hover { opacity: 0.88; }
-    .btn-outline { background: transparent; color: var(--arctic); border: 1px solid var(--arctic); }
-    .btn-outline:hover { background: var(--a-bg); }
-
-    /* NAV */
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); background: rgba(8,12,24,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; transition: box-shadow 0.3s; }
     .nav.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.32); }
-    .nav-logo     { display: flex; align-items: center; gap: 14px; }
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
     .nav-wordmark { display: flex; flex-direction: column; }
     .nav-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 13px; color: var(--white); letter-spacing: 0.07em; line-height: 1; }
-    .nav-sub  { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 7px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--platinum); margin-top: 5px; }
+    .nav-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 7px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--platinum); margin-top: 5px; }
     .nav-links { display: flex; align-items: center; gap: 28px; }
     .nav-link { font-size: 13px; color: var(--platinum); font-weight: 400; transition: color 0.18s; position: relative; }
     .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--arctic); transition: width 0.2s; }
     .nav-link:hover { color: var(--white); }
     .nav-link:hover::after { width: 100%; }
-    .nav-link.active { color: var(--white); }
-    .nav-link.active::after { width: 100%; }
-    .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; }
+    .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; border: none; }
     .nav-cta:hover { opacity: 0.88; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--platinum); font-weight: 400; transition: color 0.18s; cursor: pointer; background: none; border: none; padding: 0; white-space: nowrap; }
+    .nav-dropdown-toggle:hover { color: var(--white); }
+    .nav-dropdown-toggle::after { content: '▼'; font-size: 8px; opacity: 0.6; transition: opacity 0.18s, transform 0.2s; }
+    .nav-dropdown-toggle.open::after { transform: rotate(180deg); opacity: 1; }
+    .nav-dropdown-menu { position: absolute; top: 100%; left: -12px; background: rgba(11,30,61,0.98); border: 1px solid var(--steel); border-radius: 8px; padding: 12px 0; min-width: 200px; margin-top: 8px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.2s, visibility 0.2s; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); z-index: 300; }
+    .nav-dropdown-menu.open { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav-dropdown-item { display: block; padding: 10px 20px; font-size: 13px; color: var(--platinum); transition: background 0.15s, color 0.15s; white-space: nowrap; }
+    .nav-dropdown-item:hover { background: rgba(56,189,248,0.1); color: var(--white); }
     .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; }
     .nav-toggle span { width: 22px; height: 1.5px; background: var(--platinum); display: block; transition: transform 0.28s, opacity 0.28s; }
     .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-    /* PAGE HERO */
-    .page-hero { padding: calc(var(--nav-h) + 60px) 0 56px; background: linear-gradient(160deg, var(--abyss) 0%, #0A1830 60%, var(--navy) 100%); border-bottom: 0.5px solid var(--steel); position: relative; overflow: hidden; }
-    .page-hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 65%); top: -120px; right: -120px; pointer-events: none; }
-    .page-hero .container { position: relative; z-index: 1; }
-    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
-    .breadcrumb a { color: var(--muted); transition: color 0.18s; }
-    .breadcrumb a:hover { color: var(--platinum); }
-    .page-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(34px,5vw,56px); color: var(--white); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 18px; }
-    .hero-sub  { font-size: 16px; color: var(--platinum); line-height: 1.75; max-width: 580px; margin-bottom: 32px; }
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-
-    /* TRUST STRIP */
-    .trust-strip { background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel); padding: 18px 40px; display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; }
-    .trust-item  { display: flex; align-items: center; gap: 9px; }
-    .trust-check { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--arctic); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--arctic); font-size: 9px; font-weight: 700; }
-    .trust-label { font-size: 12px; font-weight: 500; color: var(--platinum); }
-
-    /* CONTENT */
-    .content-section     { padding: 88px 0; }
-    .content-section.alt { background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel); }
-    .lead-text { font-size: 19px; color: var(--platinum); line-height: 1.72; margin-bottom: 28px; font-weight: 300; }
-    .body-text { font-size: 15px; color: var(--platinum); line-height: 1.8; margin-bottom: 20px; }
-
-    .pull-quote { background: var(--a-bg); border: 0.5px solid var(--a-bd); border-left: 3px solid var(--arctic); border-radius: 0 8px 8px 0; padding: 28px 32px; margin: 40px 0; }
-    .pull-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--white); line-height: 1.5; }
-
-    /* BILLING ISSUES GRID */
-    .issues-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 32px 0; }
-    .issue-card { padding: 22px; background: rgba(11,30,61,0.35); border: 1px solid var(--steel); border-radius: 8px; }
-    .issue-card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 13px; color: var(--white); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .issue-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--arctic); flex-shrink: 0; }
-    .issue-card-desc { font-size: 12.5px; color: var(--platinum); line-height: 1.6; }
-
-    /* STEPS */
-    .steps { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
-    .step { display: grid; grid-template-columns: 48px 1fr; gap: 24px; padding: 28px 0; border-bottom: 0.5px solid var(--border); align-items: start; }
-    .step:last-child { border-bottom: none; }
-    .step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--a-bg); border: 1px solid var(--a-bd); display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 15px; color: var(--arctic); flex-shrink: 0; margin-top: 2px; }
-    .step-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; color: var(--white); margin-bottom: 8px; }
-    .step-desc  { font-size: 14px; color: var(--platinum); line-height: 1.7; }
-
-    /* DELIVERABLES */
-    .deliverables-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
-    .deliverables-list li { display: flex; gap: 16px; padding: 20px 0; border-bottom: 0.5px solid var(--border); align-items: flex-start; }
-    .deliverables-list li:last-child { border-bottom: none; }
-    .del-check { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--arctic); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--arctic); font-size: 9px; font-weight: 700; margin-top: 2px; }
-    .del-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; color: var(--white); margin-bottom: 5px; }
-    .del-desc  { font-size: 13px; color: var(--platinum); line-height: 1.6; }
-
-    /* USE CASES */
-    .use-cases-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
-    .use-cases-list li { font-size: 14px; color: var(--platinum); padding: 16px 0 16px 24px; position: relative; border-bottom: 0.5px solid var(--border); line-height: 1.6; }
-    .use-cases-list li:last-child { border-bottom: none; }
-    .use-cases-list li::before { content: '—'; position: absolute; left: 0; top: 18px; color: var(--arctic); font-size: 11px; }
-
-    /* RELATED */
-    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
-    .related-card { padding: 20px; background: rgba(11,30,61,0.28); border: 1px solid var(--steel); border-radius: 8px; transition: border-color 0.2s, background 0.2s; }
-    .related-card:hover { background: rgba(11,30,61,0.55); border-color: rgba(56,189,248,0.35); }
-    .related-card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; color: var(--white); margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
-    .related-arrow { color: var(--arctic); opacity: 0; font-size: 14px; transition: opacity 0.18s; }
-    .related-card:hover .related-arrow { opacity: 1; }
-    .related-card-desc { font-size: 12px; color: var(--platinum); line-height: 1.55; }
-
-    /* CTA BAND */
-    .cta-band { padding: 80px 40px; background: var(--navy); border-top: 0.5px solid var(--steel); text-align: center; }
-    .cta-band h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(24px,3vw,36px); color: var(--white); letter-spacing: -0.01em; margin-bottom: 16px; }
-    .cta-band p  { font-size: 15px; color: var(--platinum); line-height: 1.75; max-width: 520px; margin: 0 auto 32px; }
-    .cta-band-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-    /* FOOTER */
+    .page-hero { padding: calc(var(--nav-h) + 60px) 40px 60px; background: linear-gradient(160deg, var(--abyss) 0%, #0A1830 60%, var(--navy) 100%); border-bottom: 0.5px solid var(--steel); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 65%); top: -100px; right: -100px; pointer-events: none; z-index: 0; }
+    .page-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+    .page-hero-image { border-radius: 8px; overflow: hidden; }
+    .page-hero-image img { width: 100%; height: auto; }
+    .page-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(36px,5vw,60px); color: var(--white); line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 28px; }
+    .page-hero p { font-size: 16px; color: var(--platinum); line-height: 1.75; }
+    .content-section { padding: 88px 0; }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(24px,3vw,36px); color: var(--white); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 24px; }
+    .body-text { font-size: 16px; color: var(--platinum); line-height: 1.82; margin-bottom: 22px; }
     .footer { background: var(--abyss); border-top: 0.5px solid var(--steel); padding: 56px 0 32px; }
     .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 0.5px solid var(--steel); }
     .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
@@ -154,24 +75,20 @@
     .footer-legal a { color: var(--muted); transition: color 0.18s; }
     .footer-legal a:hover { color: var(--platinum); }
     .footer-trust-note { font-size: 11px; color: var(--muted); text-align: right; }
-
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .container, .container-narrow { padding: 0 24px; }
       .nav { padding: 0 24px; }
       .nav-links { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--abyss); padding: 24px; flex-direction: column; align-items: flex-start; gap: 20px; border-bottom: 0.5px solid var(--steel); z-index: 190; }
       .nav-links.open { display: flex; }
       .nav-toggle { display: flex; }
-      .trust-strip { padding: 16px 24px; gap: 16px; }
-      .issues-grid  { grid-template-columns: 1fr; }
-      .related-grid { grid-template-columns: 1fr; }
+      .nav-dropdown-menu { position: static; background: rgba(27,52,96,0.6); border: none; border-radius: 0; padding: 12px 0 12px 20px; margin-top: 0; opacity: 1; visibility: visible; pointer-events: all; }
+      .nav-dropdown-toggle { width: 100%; justify-content: space-between; }
+      .page-hero-inner { grid-template-columns: 1fr; gap: 32px; }
       .content-section { padding: 64px 0; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
       .footer-trust-note { text-align: left; }
-      .cta-band { padding: 64px 24px; }
     }
-
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { transition-duration: 0.01ms !important; }
       html { scroll-behavior: auto; }
@@ -179,331 +96,66 @@
   </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
-  <a href="../index.html" class="nav-logo" aria-label="Criterion Expert Partners — Home">
-    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" aria-hidden="true" focusable="false">
-      <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
-      <line x1="30" y1="4"  x2="30" y2="0"  stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
-      <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
-      <line x1="3"  y1="24" x2="10" y2="24" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square" opacity="0.4"/>
-    </svg>
-    <div class="nav-wordmark">
-      <span class="nav-name">CRITERION</span>
-      <span class="nav-sub">Expert Partners</span>
-    </div>
-  </a>
-  <div class="nav-links" id="nav-links">
-    <a href="../services.html"     class="nav-link active">Services</a>
-    <a href="../how-it-works.html" class="nav-link">How It Works</a>
-    <a href="../about.html"        class="nav-link">About</a>
-    <a href="../faq.html"          class="nav-link">FAQ</a>
-    <a href="../contact.html"      class="nav-link">Contact</a>
-    <a href="../start-search.html" class="nav-cta">Find an Expert</a>
-  </div>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="/" class="nav-logo" aria-label="Criterion Expert Partners — Home"><svg width="22" height="30" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/><line x1="30" y1="4" x2="30" y2="0" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/><line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/><line x1="3" y1="24" x2="10" y2="24" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square" opacity="0.4"/></svg><div class="nav-wordmark"><span class="nav-name">CRITERION</span><span class="nav-sub">Expert Partners</span></div></a>
+  <div class="nav-links" id="nav-links" role="menu"><a href="/services.html" class="nav-link" role="menuitem">Services</a><a href="/how-it-works.html" class="nav-link" role="menuitem">How It Works</a><div class="nav-dropdown"><button class="nav-dropdown-toggle" id="about-toggle" aria-label="About menu" aria-expanded="false">About</button><div class="nav-dropdown-menu" id="about-menu" role="menu"><a href="/about.html" class="nav-dropdown-item" role="menuitem">About Criterion</a><a href="/faq.html" class="nav-dropdown-item" role="menuitem">FAQ</a></div></div><a href="/contact.html" class="nav-link" role="menuitem">Contact</a><a href="/start-search.html" class="nav-cta" role="menuitem">Find an Expert</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
 </nav>
-
 <main id="main-content">
-
-  <!-- HERO -->
   <section class="page-hero" aria-labelledby="page-heading">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="../index.html">Home</a>
-        <span aria-hidden="true">›</span>
-        <a href="../services.html">Services</a>
-        <span aria-hidden="true">›</span>
-        <span>Bill Review</span>
-      </nav>
-      <h1 id="page-heading">Bill Review</h1>
-      <p class="hero-sub">When billed charges are driving claim value as much as underlying liability, bill review is essential. Criterion matches your file to a bill review professional whose experience fits the case — not just the category.</p>
-      <div class="hero-btns">
-        <a href="../start-search.html" class="btn btn-arctic">Request bill review</a>
-        <a href="../services.html"     class="btn btn-outline">All services</a>
-      </div>
+    <div class="page-hero-inner">
+      <div><h1 id="page-heading">Bill Review</h1><p>Expert analysis of medical billing and charges in high-damage personal injury and medical malpractice cases. Challenge inflated bills and support damages reduction.</p></div>
+      <div class="page-hero-image"><img src="/images/Documents-data.jpg" alt="Medical billing documents and cost analysis"></div>
     </div>
   </section>
-
-  <!-- TRUST STRIP -->
-  <div class="trust-strip">
-    <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Matched to case type and file</span></div>
-    <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Line-item billing analysis</span></div>
-    <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Written report delivered</span></div>
-    <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Pairs with IME and peer review</span></div>
-  </div>
-
-  <!-- WHAT IS IT -->
-  <section class="content-section" aria-labelledby="what-heading">
+  <section class="content-section" style="background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel);">
     <div class="container-narrow">
       <div class="eyebrow">The Service</div>
-      <h2 class="section-title" id="what-heading">When the bill is as disputed as the injury.</h2>
-
-      <p class="lead-text">In personal injury, workers' compensation, and medical malpractice litigation, the damages number is often driven less by what happened to the plaintiff and more by what was billed for treating it. Bill review addresses that directly.</p>
-
-      <p class="body-text">A bill review professional examines the medical bills submitted as damages — line by line — and evaluates whether the charges are reasonable, medically necessary, and consistent with the services actually provided. They identify billing issues that inflate the claimed damages number and produce a written report that quantifies the appropriate value of the bills at issue.</p>
-
-      <p class="body-text">Criterion reviews your case type and all file specifics before matching you with a bill review professional. The match is not made by specialty category alone — we look at the specific procedures billed, the care setting, the applicable fee schedule or reasonable value standard in the relevant jurisdiction, and the reviewer's track record with comparable files. That specificity is what separates a useful bill review from a generic one.</p>
-
-      <div class="pull-quote">
-        <p>"A bill review is most valuable when the gap between what was billed and what was reasonable is significant enough to matter at settlement or trial — and most cases involving hospital charges, surgical procedures, or extended treatment have exactly that gap."</p>
-      </div>
-
-      <p class="body-text">Bill review is frequently used alongside peer review or IME, since both the medical necessity of the treatment and the reasonableness of what was charged may be at issue simultaneously. Criterion can coordinate all three services concurrently when the case calls for it.</p>
+      <h2 class="section-title">What Bill Review Provides</h2>
+      <p class="body-text">When billed medical charges drive claim value as much as liability does, bill review is critical. We identify a bill review specialist whose expertise matches your case — whether the issues involve hospital charges, physician fees, unlawful billing practices, or unbilled services. The reviewer analyzes all charges against industry standards, applicable billing rules, and the scope of services actually rendered, producing a detailed report that identifies problematic or excessive charges and supports damages reduction arguments.</p>
     </div>
   </section>
-
-  <!-- WHAT WE IDENTIFY -->
-  <section class="content-section alt" aria-labelledby="issues-heading">
-    <div class="container">
-      <div class="eyebrow">What Bill Review Identifies</div>
-      <h2 class="section-title" id="issues-heading">Common billing issues that affect damages</h2>
-      <p class="section-sub">These are the categories of billing problems that a qualified bill review professional evaluates and documents in the written report.</p>
-
-      <div class="issues-grid">
-        <div class="issue-card">
-          <div class="issue-card-title"><div class="issue-dot" aria-hidden="true"></div>Charges above reasonable value</div>
-          <div class="issue-card-desc">Billed amounts that significantly exceed the prevailing reasonable value for the same service in the same geographic market, regardless of whether insurance paid a negotiated rate.</div>
-        </div>
-        <div class="issue-card">
-          <div class="issue-card-title"><div class="issue-dot" aria-hidden="true"></div>Upcoding</div>
-          <div class="issue-card-desc">Procedure or diagnosis codes billed at a higher complexity or severity level than the documentation in the medical record supports — artificially inflating the per-service charge.</div>
-        </div>
-        <div class="issue-card">
-          <div class="issue-card-title"><div class="issue-dot" aria-hidden="true"></div>Unbundling</div>
-          <div class="issue-card-desc">Billing separately for procedure components that should be billed together under a single code — resulting in higher total charges than proper coding would produce.</div>
-        </div>
-        <div class="issue-card">
-          <div class="issue-card-title"><div class="issue-dot" aria-hidden="true"></div>Duplicate billing</div>
-          <div class="issue-card-desc">The same service, procedure, or supply billed more than once across different providers, facilities, or billing dates — sometimes spanning multiple records sets that are not reviewed together.</div>
-        </div>
-        <div class="issue-card">
-          <div class="issue-card-title"><div class="issue-dot" aria-hidden="true"></div>Medically unnecessary services</div>
-          <div class="issue-card-desc">Procedures, diagnostics, or treatment modalities billed that are not supported as medically necessary by the clinical documentation — often identified through concurrent peer review.</div>
-        </div>
-        <div class="issue-card">
-          <div class="issue-card-title"><div class="issue-dot" aria-hidden="true"></div>Hospital lien issues</div>
-          <div class="issue-card-desc">In cases involving hospital liens — particularly where the lien amount significantly exceeds what insurance would have paid — bill review quantifies the appropriate lien value and documents the basis for reduction.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="content-section" aria-labelledby="how-heading">
+  <section class="content-section">
     <div class="container-narrow">
-      <div class="eyebrow">How It Works</div>
-      <h2 class="section-title" id="how-heading">From case intake to written report</h2>
-      <p class="section-sub" style="margin-bottom:16px;">Criterion manages the matching and coordination. You provide the case details and billing records — we handle the rest.</p>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-num" aria-hidden="true">1</div>
-          <div>
-            <div class="step-title">Submit your case and billing records</div>
-            <div class="step-desc">Provide a summary of the case, the type of injury or condition at issue, the jurisdiction, and the billing records to be reviewed. Note whether you also need peer review or IME coordination — we can run those concurrently.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num" aria-hidden="true">2</div>
-          <div>
-            <div class="step-title">File and case type review</div>
-            <div class="step-desc">Criterion reviews the full case profile — injury type, care setting, procedures billed, applicable fee schedule or reasonable value standard, and the jurisdiction — before selecting a bill review professional. The match is made on fit, not availability.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num" aria-hidden="true">3</div>
-          <div>
-            <div class="step-title">Bill review professional matched and engaged</div>
-            <div class="step-desc">We identify a bill review professional with directly relevant experience — by procedure type, care setting, and billing context. You receive their credentials and the agreed turnaround timeline before they begin the review.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num" aria-hidden="true">4</div>
-          <div>
-            <div class="step-title">Line-item review and analysis</div>
-            <div class="step-desc">The reviewer conducts a detailed, line-by-line analysis of the billing records, cross-referencing procedure codes, documentation, applicable fee schedules, and the relevant standard for reasonable value in the jurisdiction.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num" aria-hidden="true">5</div>
-          <div>
-            <div class="step-title">Written report delivered</div>
-            <div class="step-desc">You receive a written bill review report identifying billing issues found, the reasonable value of the services as billed, and the basis for the reviewer's conclusions. The report is structured to be usable in settlement negotiations and, where appropriate, to support expert testimony on damages.</div>
-          </div>
-        </div>
-      </div>
+      <div class="eyebrow">When Bill Review Works</div>
+      <h2 class="section-title">High-Damage Cases Requiring Billing Analysis</h2>
+      <p class="body-text"><strong>Hospital Bills and Facility Charges</strong> — Hospital charges are frequently marked up dramatically over actual costs. A bill reviewer identifies standard-of-care issues, facilities charges, and billable-vs-nonbillable services that drive excessive damages claims.</p>
+      <p class="body-text"><strong>Physician and Specialist Fees</strong> — Unusual frequency of treatment, overlapping billings, or charges for services outside the scope of reasonable care can be identified and challenged by a bill review expert.</p>
+      <p class="body-text"><strong>Third-Party Payer Issues</strong> — Hospital liens, insurance billing disputes, and unbilled charges create complexity. A bill reviewer clarifies what was actually paid, what remains outstanding, and what constitutes reasonable charges under the circumstances.</p>
+      <p class="body-text"><strong>Paired with IME or Peer Review</strong> — Bill review often works best in combination with a peer review or IME, where the medical expert identifies treatment unnecessitiated and the bill reviewer quantifies the resulting billing excess.</p>
     </div>
   </section>
-
-  <!-- DELIVERABLES -->
-  <section class="content-section alt" aria-labelledby="deliverables-heading">
+  <section class="content-section" style="background: var(--navy); border-top: 0.5px solid var(--steel); text-align: center;">
     <div class="container-narrow">
-      <div class="eyebrow">What You Receive</div>
-      <h2 class="section-title" id="deliverables-heading">Deliverables for every bill review engagement</h2>
-
-      <ul class="deliverables-list">
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Reviewer credentials and match rationale</div>
-            <div class="del-desc">Prior to the review beginning, you receive the reviewer's credentials and the basis for their selection — including their relevant experience with the procedure types and billing context in your case.</div>
-          </div>
-        </li>
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Line-item billing analysis</div>
-            <div class="del-desc">A detailed analysis of the billing records submitted, evaluated against applicable fee schedules, procedure code guidelines, and the reasonable value standard for the jurisdiction.</div>
-          </div>
-        </li>
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Reasonable value determination</div>
-            <div class="del-desc">A documented opinion on the reasonable value of the services billed — the number that should be used as the damages baseline rather than the billed amount, supported by the reviewer's analysis and methodology.</div>
-          </div>
-        </li>
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Identification of specific billing issues</div>
-            <div class="del-desc">A categorized list of billing problems identified — upcoding, unbundling, duplication, charges above reasonable value, and any other issues that support a reduction in the claimed damages number.</div>
-          </div>
-        </li>
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Written report structured for litigation use</div>
-            <div class="del-desc">The final report is structured to support settlement negotiations and, where the reviewer is retained as a testifying expert, to meet the requirements for expert opinion disclosure.</div>
-          </div>
-        </li>
-      </ul>
+      <h2 class="section-title" style="margin-bottom: 16px;">Ready to request bill review?</h2>
+      <p class="body-text" style="margin-bottom: 32px;">Submit your case and we'll identify the right reviewer.</p>
+      <a href="/start-search.html" class="btn btn-arctic">Request bill review →</a>
     </div>
   </section>
-
-  <!-- USE CASES -->
-  <section class="content-section" aria-labelledby="usecases-heading">
-    <div class="container-narrow">
-      <div class="eyebrow">When to Use This Service</div>
-      <h2 class="section-title" id="usecases-heading">Cases where bill review changes the damages number</h2>
-
-      <ul class="use-cases-list">
-        <li>High-bill personal injury cases where hospital charges, surgical fees, or extended treatment costs are driving the claimed damages significantly above what the injury mechanism would typically support.</li>
-        <li>Cases involving hospital liens where the lien amount substantially exceeds what a health insurer would have negotiated — and the defense or plaintiff needs documentation of appropriate lien value.</li>
-        <li>Workers' compensation defense where medical cost containment is a litigation priority and the billed amounts exceed the applicable fee schedule.</li>
-        <li>Medical malpractice cases where the claimed cost of remedial treatment or ongoing care is a significant component of the damages claim.</li>
-        <li>Cases where the same treating provider billed for services across multiple settings — emergency, inpatient, outpatient follow-up — and the aggregate billing warrants consolidated review.</li>
-        <li>Defense matters where a damages expert on the plaintiff's side has relied on billed amounts rather than reasonable value, and the defense needs an offsetting expert opinion.</li>
-        <li>Any case where you are simultaneously conducting peer review or IME — bill review coordinates naturally with both and produces a more complete damages picture.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- RELATED -->
-  <section class="content-section alt" aria-labelledby="related-heading">
-    <div class="container">
-      <div class="eyebrow">Related Services</div>
-      <h2 class="section-title" id="related-heading">Bill review works best alongside these</h2>
-      <p class="section-sub">Criterion coordinates all three services concurrently when the case calls for it.</p>
-      <div class="related-grid">
-        <a href="peer-review.html" class="related-card">
-          <div class="related-card-title">Peer Review &amp; Record Analysis <span class="related-arrow">→</span></div>
-          <div class="related-card-desc">Combine clinical review with bill review to address both medical necessity and billing reasonableness in a single coordinated engagement.</div>
-        </a>
-        <a href="ime.html" class="related-card">
-          <div class="related-card-title">Independent Medical Examinations <span class="related-arrow">→</span></div>
-          <div class="related-card-desc">Pair an IME with bill review to address both the extent of injury and the reasonableness of the treatment costs simultaneously.</div>
-        </a>
-        <a href="expert-search.html" class="related-card">
-          <div class="related-card-title">Start an Expert Search <span class="related-arrow">→</span></div>
-          <div class="related-card-desc">If bill review findings need to be presented at trial, Criterion can place a testifying damages expert to support the opinion.</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-band" aria-labelledby="cta-heading">
-    <h2 id="cta-heading">Ready to request a bill review?</h2>
-    <p>Submit your case and billing records. Criterion will match you with the right reviewer and confirm turnaround within 1 business day.</p>
-    <div class="cta-band-btns">
-      <a href="../start-search.html" class="btn btn-arctic">Request bill review</a>
-      <a href="../services.html"     class="btn btn-outline">View all services</a>
-    </div>
-  </section>
-
 </main>
-
-<!-- FOOTER -->
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <svg width="16" height="22" viewBox="0 0 36 48" fill="none" aria-hidden="true">
-            <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
-            <line x1="30" y1="4"  x2="30" y2="0"  stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
-            <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
-          </svg>
-          <span class="footer-brand-name">CRITERION EXPERT PARTNERS</span>
-        </div>
-        <div class="footer-tagline">The Expert Standard.</div>
-        <div class="footer-loc">Los Angeles, California<br>Serving Litigation Firms Nationwide</div>
-      </div>
-      <div>
-        <div class="footer-col-label">Services</div>
-        <ul class="footer-links">
-          <li><a href="expert-search.html">Start an Expert Search</a></li>
-          <li><a href="peer-review.html">Peer Review &amp; Record Analysis</a></li>
-          <li><a href="ime.html">Independent Medical Examinations</a></li>
-          <li><a href="bill-review.html">Bill Review</a></li>
-          <li><a href="site-inspections.html">Site &amp; Facility Inspections</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-label">Firm</div>
-        <ul class="footer-links">
-          <li><a href="../how-it-works.html">How It Works</a></li>
-          <li><a href="../about.html">About Criterion</a></li>
-          <li><a href="../faq.html">FAQ</a></li>
-          <li><a href="../join-panel.html">Join the Expert Panel</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div><div class="footer-brand"><svg width="16" height="22" viewBox="0 0 36 48" fill="none" aria-hidden="true"><polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/><line x1="30" y1="4" x2="30" y2="0" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/><line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/></svg><span class="footer-brand-name">CRITERION EXPERT PARTNERS</span></div><div class="footer-tagline">The Expert Standard.</div><div class="footer-loc">Los Angeles, California<br>Serving Litigation Firms Nationwide</div></div>
+      <div><div class="footer-col-label">Services</div><ul class="footer-links"><li><a href="/services/expert-search.html">Start an Expert Search</a></li><li><a href="/services/peer-review.html">Peer Review &amp; Record Analysis</a></li><li><a href="/services/ime.html">Independent Medical Examinations</a></li><li><a href="/services/bill-review.html">Bill Review</a></li><li><a href="/services/site-inspections.html">Site &amp; Facility Inspections</a></li></ul></div>
+      <div><div class="footer-col-label">Firm</div><ul class="footer-links"><li><a href="/how-it-works.html">How It Works</a></li><li><a href="/about.html">About Criterion</a></li><li><a href="/join-panel.html">Join the Expert Panel</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-legal">
-        <span>&copy; 2026 Criterion Expert Partners. All rights reserved.</span>
-        <a href="../privacy.html">Privacy Policy</a>
-        <a href="../terms.html">Terms of Service</a>
-      </div>
-      <div class="footer-trust-note">All experts background-checked, credential-verified, and confidentiality bound.</div>
-    </div>
+    <div class="footer-bottom"><div class="footer-legal"><span>&copy; 2026 Criterion Expert Partners. All rights reserved.</span><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div><div class="footer-trust-note">All experts background-checked, credential-verified, and confidentiality bound.</div></div>
   </div>
 </footer>
-
 <script>
   const nav = document.getElementById('main-nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
-  const toggle = document.getElementById('nav-toggle');
-  const links  = document.getElementById('nav-links');
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-  });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
-  }));
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && links.classList.contains('open')) {
-      links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.focus();
-    }
-  });
+  const toggle = document.getElementById('nav-toggle'), navLinks = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => { const open = navLinks.classList.toggle('open'); toggle.classList.toggle('open', open); toggle.setAttribute('aria-expanded', String(open)); });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { navLinks.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }));
+  const aboutToggle = document.getElementById('about-toggle'), aboutMenu = document.getElementById('about-menu');
+  if (aboutToggle && aboutMenu) {
+    aboutToggle.addEventListener('click', e => { e.preventDefault(); const isOpen = aboutMenu.classList.toggle('open'); aboutToggle.classList.toggle('open', isOpen); aboutToggle.setAttribute('aria-expanded', String(isOpen)); });
+    document.addEventListener('click', e => { if (!e.target.closest('.nav-dropdown')) { aboutMenu.classList.remove('open'); aboutToggle.classList.remove('open'); aboutToggle.setAttribute('aria-expanded', 'false'); } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && aboutMenu.classList.contains('open')) { aboutMenu.classList.remove('open'); aboutToggle.classList.remove('open'); aboutToggle.setAttribute('aria-expanded', 'false'); } });
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && navLinks.classList.contains('open')) { navLinks.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus(); } });
 </script>
 </body>
 </html>
