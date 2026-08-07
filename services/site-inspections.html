@@ -3,144 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="On-site inspection and forensic evaluation for construction defect, premises liability, and workplace safety litigation. Inspectors matched by structure type and defect category. Criterion Expert Partners.">
-  <title>Site &amp; Facility Inspections | Criterion Expert Partners</title>
-
+  <meta name="description" content="Site & Facility Inspections from Criterion Expert Partners. Forensic site inspection coordination for construction defect, premises liability, and workplace safety litigation.">
+  <title>Site & Facility Inspections | Criterion Expert Partners</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --abyss:    #080C18;
-      --navy:     #0B1E3D;
-      --steel:    #1B3460;
-      --platinum: #B4B9C8;
-      --arctic:   #38BDF8;
-      --white:    #F4F6FB;
-      --muted:    #5B6A88;
-      --border:   rgba(180,185,200,0.12);
-      --a-bg:     rgba(56,189,248,0.07);
-      --a-bd:     rgba(56,189,248,0.22);
-      --nav-h:    68px;
-    }
-
+    :root { --abyss: #080C18; --navy: #0B1E3D; --steel: #1B3460; --platinum: #B4B9C8; --arctic: #38BDF8; --white: #F4F6FB; --muted: #5B6A88; --border: rgba(180,185,200,0.12); --a-bg: rgba(56,189,248,0.07); --a-bd: rgba(56,189,248,0.22); --nav-h: 68px; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html  { scroll-behavior: smooth; }
-    body  { background: var(--abyss); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    a     { text-decoration: none; color: inherit; }
-    button{ cursor: pointer; font-family: inherit; }
-
-    .container        { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
-    .container-narrow { max-width: 760px;  margin: 0 auto; padding: 0 40px; }
-
+    html { scroll-behavior: smooth; }
+    body { background: var(--abyss); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: inherit; }
+    img { display: block; max-width: 100%; height: auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 40px; }
     .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--arctic); margin-bottom: 16px; }
     .eyebrow::before { content: ''; width: 20px; height: 1.5px; background: var(--arctic); flex-shrink: 0; }
-
-    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px,3vw,38px); color: var(--white); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 18px; }
-    .section-sub   { font-size: 15px; color: var(--platinum); line-height: 1.75; max-width: 580px; margin-bottom: 48px; }
-
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 6px; font-size: 14px; font-weight: 600; border: none; transition: opacity 0.18s; white-space: nowrap; }
-    .btn-arctic  { background: var(--arctic); color: var(--abyss); }
+    .btn-arctic { background: var(--arctic); color: var(--abyss); }
     .btn-arctic:hover { opacity: 0.88; }
-    .btn-outline { background: transparent; color: var(--arctic); border: 1px solid var(--arctic); }
-    .btn-outline:hover { background: var(--a-bg); }
-
-    /* NAV */
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); background: rgba(8,12,24,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; transition: box-shadow 0.3s; }
     .nav.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.32); }
-    .nav-logo     { display: flex; align-items: center; gap: 14px; }
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
     .nav-wordmark { display: flex; flex-direction: column; }
     .nav-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 13px; color: var(--white); letter-spacing: 0.07em; line-height: 1; }
-    .nav-sub  { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 7px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--platinum); margin-top: 5px; }
+    .nav-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 7px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--platinum); margin-top: 5px; }
     .nav-links { display: flex; align-items: center; gap: 28px; }
     .nav-link { font-size: 13px; color: var(--platinum); font-weight: 400; transition: color 0.18s; position: relative; }
     .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--arctic); transition: width 0.2s; }
     .nav-link:hover { color: var(--white); }
     .nav-link:hover::after { width: 100%; }
-    .nav-link.active { color: var(--white); }
-    .nav-link.active::after { width: 100%; }
-    .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; }
+    .nav-cta { background: var(--arctic); color: var(--abyss); padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: opacity 0.18s; border: none; }
     .nav-cta:hover { opacity: 0.88; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--platinum); font-weight: 400; transition: color 0.18s; cursor: pointer; background: none; border: none; padding: 0; white-space: nowrap; }
+    .nav-dropdown-toggle:hover { color: var(--white); }
+    .nav-dropdown-toggle::after { content: '▼'; font-size: 8px; opacity: 0.6; transition: opacity 0.18s, transform 0.2s; }
+    .nav-dropdown-toggle.open::after { transform: rotate(180deg); opacity: 1; }
+    .nav-dropdown-menu { position: absolute; top: 100%; left: -12px; background: rgba(11,30,61,0.98); border: 1px solid var(--steel); border-radius: 8px; padding: 12px 0; min-width: 200px; margin-top: 8px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.2s, visibility 0.2s; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); z-index: 300; }
+    .nav-dropdown-menu.open { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav-dropdown-item { display: block; padding: 10px 20px; font-size: 13px; color: var(--platinum); transition: background 0.15s, color 0.15s; white-space: nowrap; }
+    .nav-dropdown-item:hover { background: rgba(56,189,248,0.1); color: var(--white); }
     .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; }
     .nav-toggle span { width: 22px; height: 1.5px; background: var(--platinum); display: block; transition: transform 0.28s, opacity 0.28s; }
     .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-    /* PAGE HERO */
-    .page-hero { padding: calc(var(--nav-h) + 60px) 0 56px; background: linear-gradient(160deg, var(--abyss) 0%, #0A1830 60%, var(--navy) 100%); border-bottom: 0.5px solid var(--steel); position: relative; overflow: hidden; }
-    .page-hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 65%); top: -120px; right: -120px; pointer-events: none; }
-    .page-hero .container { position: relative; z-index: 1; }
-    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
-    .breadcrumb a { color: var(--muted); transition: color 0.18s; }
-    .breadcrumb a:hover { color: var(--platinum); }
-    .page-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(34px,5vw,56px); color: var(--white); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 18px; }
-    .hero-sub  { font-size: 16px; color: var(--platinum); line-height: 1.75; max-width: 580px; margin-bottom: 32px; }
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-
-    /* TRUST STRIP */
-    .trust-strip { background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel); padding: 18px 40px; display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; }
-    .trust-item  { display: flex; align-items: center; gap: 9px; }
-    .trust-check { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--arctic); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--arctic); font-size: 9px; font-weight: 700; }
-    .trust-label { font-size: 12px; font-weight: 500; color: var(--platinum); }
-
-    /* CONTENT */
-    .content-section     { padding: 88px 0; }
-    .content-section.alt { background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel); }
-    .lead-text { font-size: 19px; color: var(--platinum); line-height: 1.72; margin-bottom: 28px; font-weight: 300; }
-    .body-text { font-size: 15px; color: var(--platinum); line-height: 1.8; margin-bottom: 20px; }
-
-    .pull-quote { background: var(--a-bg); border: 0.5px solid var(--a-bd); border-left: 3px solid var(--arctic); border-radius: 0 8px 8px 0; padding: 28px 32px; margin: 40px 0; }
-    .pull-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--white); line-height: 1.5; }
-
-    /* MATTER TYPES */
-    .matter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 32px 0; }
-    .matter-card { padding: 24px; background: rgba(11,30,61,0.35); border: 1px solid var(--steel); border-radius: 8px; }
-    .matter-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--arctic); margin-bottom: 10px; }
-    .matter-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; color: var(--white); margin-bottom: 10px; }
-    .matter-list  { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-    .matter-list li { font-size: 12px; color: var(--platinum); padding-left: 14px; position: relative; line-height: 1.5; }
-    .matter-list li::before { content: '–'; position: absolute; left: 0; color: var(--muted); }
-
-    /* STEPS */
-    .steps { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
-    .step { display: grid; grid-template-columns: 48px 1fr; gap: 24px; padding: 28px 0; border-bottom: 0.5px solid var(--border); align-items: start; }
-    .step:last-child { border-bottom: none; }
-    .step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--a-bg); border: 1px solid var(--a-bd); display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 15px; color: var(--arctic); flex-shrink: 0; margin-top: 2px; }
-    .step-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; color: var(--white); margin-bottom: 8px; }
-    .step-desc  { font-size: 14px; color: var(--platinum); line-height: 1.7; }
-
-    /* DELIVERABLES */
-    .deliverables-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
-    .deliverables-list li { display: flex; gap: 16px; padding: 20px 0; border-bottom: 0.5px solid var(--border); align-items: flex-start; }
-    .deliverables-list li:last-child { border-bottom: none; }
-    .del-check { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--arctic); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--arctic); font-size: 9px; font-weight: 700; margin-top: 2px; }
-    .del-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; color: var(--white); margin-bottom: 5px; }
-    .del-desc  { font-size: 13px; color: var(--platinum); line-height: 1.6; }
-
-    /* USE CASES */
-    .use-cases-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
-    .use-cases-list li { font-size: 14px; color: var(--platinum); padding: 16px 0 16px 24px; position: relative; border-bottom: 0.5px solid var(--border); line-height: 1.6; }
-    .use-cases-list li:last-child { border-bottom: none; }
-    .use-cases-list li::before { content: '—'; position: absolute; left: 0; top: 18px; color: var(--arctic); font-size: 11px; }
-
-    /* RELATED */
-    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
-    .related-card { padding: 20px; background: rgba(11,30,61,0.28); border: 1px solid var(--steel); border-radius: 8px; transition: border-color 0.2s, background 0.2s; }
-    .related-card:hover { background: rgba(11,30,61,0.55); border-color: rgba(56,189,248,0.35); }
-    .related-card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; color: var(--white); margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
-    .related-arrow { color: var(--arctic); opacity: 0; font-size: 14px; transition: opacity 0.18s; }
-    .related-card:hover .related-arrow { opacity: 1; }
-    .related-card-desc { font-size: 12px; color: var(--platinum); line-height: 1.55; }
-
-    /* CTA BAND */
-    .cta-band { padding: 80px 40px; background: var(--navy); border-top: 0.5px solid var(--steel); text-align: center; }
-    .cta-band h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(24px,3vw,36px); color: var(--white); letter-spacing: -0.01em; margin-bottom: 16px; }
-    .cta-band p  { font-size: 15px; color: var(--platinum); line-height: 1.75; max-width: 520px; margin: 0 auto 32px; }
-    .cta-band-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-    /* FOOTER */
+    .page-hero { padding: calc(var(--nav-h) + 60px) 40px 60px; background: linear-gradient(160deg, var(--abyss) 0%, #0A1830 60%, var(--navy) 100%); border-bottom: 0.5px solid var(--steel); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 65%); top: -100px; right: -100px; pointer-events: none; z-index: 0; }
+    .page-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+    .page-hero-image { border-radius: 8px; overflow: hidden; }
+    .page-hero-image img { width: 100%; height: auto; }
+    .page-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(36px,5vw,60px); color: var(--white); line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 28px; }
+    .page-hero p { font-size: 16px; color: var(--platinum); line-height: 1.75; }
+    .content-section { padding: 88px 0; }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(24px,3vw,36px); color: var(--white); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 24px; }
+    .body-text { font-size: 16px; color: var(--platinum); line-height: 1.82; margin-bottom: 22px; }
     .footer { background: var(--abyss); border-top: 0.5px solid var(--steel); padding: 56px 0 32px; }
     .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 0.5px solid var(--steel); }
     .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
@@ -156,24 +75,20 @@
     .footer-legal a { color: var(--muted); transition: color 0.18s; }
     .footer-legal a:hover { color: var(--platinum); }
     .footer-trust-note { font-size: 11px; color: var(--muted); text-align: right; }
-
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .container, .container-narrow { padding: 0 24px; }
       .nav { padding: 0 24px; }
       .nav-links { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--abyss); padding: 24px; flex-direction: column; align-items: flex-start; gap: 20px; border-bottom: 0.5px solid var(--steel); z-index: 190; }
       .nav-links.open { display: flex; }
       .nav-toggle { display: flex; }
-      .trust-strip  { padding: 16px 24px; gap: 16px; }
-      .matter-grid  { grid-template-columns: 1fr; }
-      .related-grid { grid-template-columns: 1fr; }
+      .nav-dropdown-menu { position: static; background: rgba(27,52,96,0.6); border: none; border-radius: 0; padding: 12px 0 12px 20px; margin-top: 0; opacity: 1; visibility: visible; pointer-events: all; }
+      .nav-dropdown-toggle { width: 100%; justify-content: space-between; }
+      .page-hero-inner { grid-template-columns: 1fr; gap: 32px; }
       .content-section { padding: 64px 0; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
       .footer-trust-note { text-align: left; }
-      .cta-band { padding: 64px 24px; }
     }
-
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { transition-duration: 0.01ms !important; }
       html { scroll-behavior: auto; }
@@ -181,371 +96,66 @@
   </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
-  <a href="../index.html" class="nav-logo" aria-label="Criterion Expert Partners — Home">
-    <svg width="22" height="30" viewBox="0 0 36 48" fill="none" aria-hidden="true" focusable="false">
-      <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
-      <line x1="30" y1="4"  x2="30" y2="0"  stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
-      <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2"   stroke-linecap="square"/>
-      <line x1="3"  y1="24" x2="10" y2="24" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square" opacity="0.4"/>
-    </svg>
-    <div class="nav-wordmark">
-      <span class="nav-name">CRITERION</span>
-      <span class="nav-sub">Expert Partners</span>
-    </div>
-  </a>
-  <div class="nav-links" id="nav-links">
-    <a href="../services.html"     class="nav-link active">Services</a>
-    <a href="../how-it-works.html" class="nav-link">How It Works</a>
-    <a href="../about.html"        class="nav-link">About</a>
-    <a href="../faq.html"          class="nav-link">FAQ</a>
-    <a href="../contact.html"      class="nav-link">Contact</a>
-    <a href="../start-search.html" class="nav-cta">Find an Expert</a>
-  </div>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="/" class="nav-logo" aria-label="Criterion Expert Partners — Home"><svg width="22" height="30" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/><line x1="30" y1="4" x2="30" y2="0" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/><line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/><line x1="3" y1="24" x2="10" y2="24" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="square" opacity="0.4"/></svg><div class="nav-wordmark"><span class="nav-name">CRITERION</span><span class="nav-sub">Expert Partners</span></div></a>
+  <div class="nav-links" id="nav-links" role="menu"><a href="/services.html" class="nav-link" role="menuitem">Services</a><a href="/how-it-works.html" class="nav-link" role="menuitem">How It Works</a><div class="nav-dropdown"><button class="nav-dropdown-toggle" id="about-toggle" aria-label="About menu" aria-expanded="false">About</button><div class="nav-dropdown-menu" id="about-menu" role="menu"><a href="/about.html" class="nav-dropdown-item" role="menuitem">About Criterion</a><a href="/faq.html" class="nav-dropdown-item" role="menuitem">FAQ</a></div></div><a href="/contact.html" class="nav-link" role="menuitem">Contact</a><a href="/start-search.html" class="nav-cta" role="menuitem">Find an Expert</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
 </nav>
-
 <main id="main-content">
-
-  <!-- HERO -->
   <section class="page-hero" aria-labelledby="page-heading">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="../index.html">Home</a>
-        <span aria-hidden="true">›</span>
-        <a href="../services.html">Services</a>
-        <span aria-hidden="true">›</span>
-        <span>Site &amp; Facility Inspections</span>
-      </nav>
-      <h1 id="page-heading">Site &amp; Facility Inspections</h1>
-      <p class="hero-sub">On-site inspection and forensic evaluation for construction defect, premises liability, and workplace safety litigation. Inspectors matched by structure type, defect category, and applicable building code standards — not just specialty title.</p>
-      <div class="hero-btns">
-        <a href="../start-search.html" class="btn btn-arctic">Request an inspection</a>
-        <a href="../services.html"     class="btn btn-outline">All services</a>
-      </div>
+    <div class="page-hero-inner">
+      <div><h1 id="page-heading">Site &amp; Facility Inspections</h1><p>On-site forensic inspection and evaluation for construction defect, premises liability, and workplace safety litigation. Inspectors matched to structure type and defect category.</p></div>
+      <div class="page-hero-image"><img src="/images/Site-inspections.jpg" alt="Professional site inspector conducting on-site inspection"></div>
     </div>
   </section>
-
-  <!-- TRUST STRIP -->
-  <div class="trust-strip">
-    <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Matched by structure type</span></div>
-    <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Building code expertise</span></div>
-    <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Forensic evaluation on-site</span></div>
-    <div class="trust-item"><div class="trust-check" aria-hidden="true">✓</div><span class="trust-label">Written report with documentation</span></div>
-  </div>
-
-  <!-- WHAT IS IT -->
-  <section class="content-section" aria-labelledby="what-heading">
+  <section class="content-section" style="background: var(--navy); border-top: 0.5px solid var(--steel); border-bottom: 0.5px solid var(--steel);">
     <div class="container-narrow">
       <div class="eyebrow">The Service</div>
-      <h2 class="section-title" id="what-heading">The right inspector for the structure, the defect, and the jurisdiction.</h2>
-
-      <p class="lead-text">Site and facility inspections are only as useful as the inspector conducting them. A structural engineer evaluating a roofing defect, or a general contractor reviewing a complex MEP failure, produces findings that opposing counsel will dismantle. Criterion matches inspectors to the specific structure type, defect category, and code standards applicable to the matter.</p>
-
-      <p class="body-text">When a case turns on what happened to a building — whether it was built wrong, maintained negligently, or failed to meet code — the inspector who goes on-site needs to be the right person for that specific claim. Criterion evaluates the structure type, the nature of the alleged defect or hazard, the jurisdiction's applicable building codes, and the specific forensic questions the inspection needs to answer before selecting an inspector.</p>
-
-      <p class="body-text">Criterion coordinates site access, schedules inspection dates, manages communication with opposing counsel where joint inspections are required, and tracks inspection report delivery. We handle the logistics so the attorney can focus on the case.</p>
-
-      <div class="pull-quote">
-        <p>"An inspection report from a specialist whose expertise precisely matches the defect category carries far more evidentiary weight than one from a generalist who happens to be licensed in the right state."</p>
-      </div>
+      <h2 class="section-title">What's Included</h2>
+      <p class="body-text">Criterion identifies and engages a qualified inspector matched to your matter — structural engineer for construction defect, safety professional for workplace claims, facility expert for premises liability. The inspector conducts an on-site evaluation, documents findings with photos and measurements, evaluates the conditions against applicable building codes and standards, and produces a detailed inspection report with analysis and recommendations.</p>
     </div>
   </section>
-
-  <!-- MATTER TYPES -->
-  <section class="content-section alt" aria-labelledby="matters-heading">
-    <div class="container">
-      <div class="eyebrow">Matter Types We Cover</div>
-      <h2 class="section-title" id="matters-heading">Inspections across the full range of construction and premises litigation</h2>
-      <p class="section-sub">Criterion coordinates inspections for the following matter categories. If your case involves a structure or facility, we can find the right inspector for it.</p>
-
-      <div class="matter-grid">
-        <div class="matter-card">
-          <div class="matter-eyebrow">Construction Defect</div>
-          <div class="matter-title">Residential &amp; Multi-Family</div>
-          <ul class="matter-list">
-            <li>Single-family home defect claims</li>
-            <li>Condominium and HOA matters</li>
-            <li>Apartment complex construction issues</li>
-            <li>Water intrusion and waterproofing failures</li>
-            <li>Foundation and grading defects</li>
-          </ul>
-        </div>
-        <div class="matter-card">
-          <div class="matter-eyebrow">Construction Defect</div>
-          <div class="matter-title">Commercial &amp; Industrial</div>
-          <ul class="matter-list">
-            <li>Commercial building envelope failures</li>
-            <li>Structural deficiencies</li>
-            <li>MEP (mechanical, electrical, plumbing) failures</li>
-            <li>Fire suppression and life safety defects</li>
-            <li>ADA compliance issues</li>
-          </ul>
-        </div>
-        <div class="matter-card">
-          <div class="matter-eyebrow">Premises Liability</div>
-          <div class="matter-title">Hazardous Conditions</div>
-          <ul class="matter-list">
-            <li>Slip, trip, and fall site conditions</li>
-            <li>Inadequate lighting or signage</li>
-            <li>Unsafe walkways, stairs, or entryways</li>
-            <li>Parking lot and exterior conditions</li>
-            <li>Property maintenance failures</li>
-          </ul>
-        </div>
-        <div class="matter-card">
-          <div class="matter-eyebrow">Workplace Safety</div>
-          <div class="matter-title">OSHA &amp; Industrial</div>
-          <ul class="matter-list">
-            <li>OSHA violation documentation</li>
-            <li>Industrial equipment safety failures</li>
-            <li>Fall protection and scaffolding issues</li>
-            <li>Hazardous materials and exposure conditions</li>
-            <li>Warehouse and logistics facility safety</li>
-          </ul>
-        </div>
-        <div class="matter-card">
-          <div class="matter-eyebrow">Environmental</div>
-          <div class="matter-title">Site Contamination &amp; Assessment</div>
-          <ul class="matter-list">
-            <li>Phase I and II environmental assessments</li>
-            <li>Mold, asbestos, and lead investigation</li>
-            <li>Soil and groundwater contamination</li>
-            <li>Indoor air quality evaluation</li>
-            <li>Remediation scope assessment</li>
-          </ul>
-        </div>
-        <div class="matter-card">
-          <div class="matter-eyebrow">Code &amp; Standards</div>
-          <div class="matter-title">Building Code Analysis</div>
-          <ul class="matter-list">
-            <li>Applicable code version identification</li>
-            <li>Code compliance evaluation at time of construction</li>
-            <li>Permit and inspection record review</li>
-            <li>Standards deviation documentation</li>
-            <li>Retrofit and upgrade code requirements</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="content-section" aria-labelledby="how-heading">
+  <section class="content-section">
     <div class="container-narrow">
-      <div class="eyebrow">How It Works</div>
-      <h2 class="section-title" id="how-heading">From case submission to inspection report</h2>
-      <p class="section-sub" style="margin-bottom:16px;">Criterion manages every coordination step. You provide the case details and site access information — we handle the rest.</p>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-num" aria-hidden="true">1</div>
-          <div>
-            <div class="step-title">Submit your case and site details</div>
-            <div class="step-desc">Provide a description of the structure, the alleged defect or hazardous condition, the jurisdiction, site access status, and any scheduling constraints. Note whether the inspection is ex parte or whether joint inspection with opposing counsel is required or anticipated.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num" aria-hidden="true">2</div>
-          <div>
-            <div class="step-title">Inspector matching</div>
-            <div class="step-desc">Criterion identifies inspectors whose expertise directly matches the structure type, defect category, and applicable code standards. For construction defect, we evaluate experience with the specific construction method, materials, and code era relevant to the matter. For premises liability, we match to the specific hazard type and occupancy category.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num" aria-hidden="true">3</div>
-          <div>
-            <div class="step-title">Site access coordination</div>
-            <div class="step-desc">We coordinate with the property owner, opposing counsel, or managing agent to confirm site access dates. Where joint inspection protocols apply, Criterion manages the scheduling communication and confirms logistical arrangements with all parties.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num" aria-hidden="true">4</div>
-          <div>
-            <div class="step-title">On-site inspection and documentation</div>
-            <div class="step-desc">The inspector conducts the on-site evaluation, documents conditions through photographs and field notes, and collects any material samples or measurements required for the forensic analysis. Criterion confirms inspection completion and initiates report preparation.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num" aria-hidden="true">5</div>
-          <div>
-            <div class="step-title">Written report and documentation delivered</div>
-            <div class="step-desc">You receive the inspection report with findings, photographic documentation, and the inspector's forensic conclusions. Criterion tracks the report timeline and follows up with the inspector if delivery is delayed beyond the agreed turnaround window.</div>
-          </div>
-        </div>
-      </div>
+      <div class="eyebrow">Common Applications</div>
+      <h2 class="section-title">Construction, Safety &amp; Premises Liability</h2>
+      <p class="body-text"><strong>Construction Defect</strong> — Residential or commercial construction claims involving structural, mechanical, roofing, or water intrusion issues require expert inspection to document the defect, identify causation, and assess remediation cost.</p>
+      <p class="body-text"><strong>Premises Liability</strong> — Slip-and-fall, inadequate lighting, or structural hazard claims benefit from on-site inspection to document the condition, hazard, and any code violations at the time of incident.</p>
+      <p class="body-text"><strong>Workplace Safety</strong> — OSHA violations or workplace injury claims may require site inspection to evaluate equipment, fall protection, housekeeping, and compliance with safety standards.</p>
+      <p class="body-text"><strong>Environmental Assessment</strong> — Contamination, mold, or environmental hazard claims may require specialized inspection and testing to identify the scope and severity of the issue.</p>
     </div>
   </section>
-
-  <!-- DELIVERABLES -->
-  <section class="content-section alt" aria-labelledby="deliverables-heading">
+  <section class="content-section" style="background: var(--navy); border-top: 0.5px solid var(--steel); text-align: center;">
     <div class="container-narrow">
-      <div class="eyebrow">What You Receive</div>
-      <h2 class="section-title" id="deliverables-heading">Deliverables for every inspection engagement</h2>
-
-      <ul class="deliverables-list">
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Inspector credentials and match rationale</div>
-            <div class="del-desc">The inspector's qualifications, licensing, and the specific basis for their selection — including relevant experience with the structure type and defect category at issue — provided before the inspection is scheduled.</div>
-          </div>
-        </li>
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Confirmed site access and inspection schedule</div>
-            <div class="del-desc">Written confirmation of the inspection date, time, participating parties, and any access protocols or restrictions. Joint inspection coordination with opposing counsel included where applicable.</div>
-          </div>
-        </li>
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Written inspection report with forensic findings</div>
-            <div class="del-desc">A structured report documenting the conditions observed, the inspector's forensic analysis of the defect or hazard, applicable code standards, and the inspector's opinions on cause and responsibility. Structured to support expert witness disclosure where the inspector will testify.</div>
-          </div>
-        </li>
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Photographic documentation</div>
-            <div class="del-desc">Organized, labeled photographic documentation of all conditions observed during the inspection — keyed to the report findings and formatted for exhibit use.</div>
-          </div>
-        </li>
-        <li>
-          <div class="del-check" aria-hidden="true">✓</div>
-          <div>
-            <div class="del-title">Code and standards analysis</div>
-            <div class="del-desc">Where applicable, identification of the building codes, standards, and specifications in effect at the time of construction, and an analysis of whether the work as performed complied with those requirements.</div>
-          </div>
-        </li>
-      </ul>
+      <h2 class="section-title" style="margin-bottom: 16px;">Ready to schedule an inspection?</h2>
+      <p class="body-text" style="margin-bottom: 32px;">Submit your case and we'll coordinate the inspection.</p>
+      <a href="/start-search.html" class="btn btn-arctic">Request an inspection →</a>
     </div>
   </section>
-
-  <!-- USE CASES -->
-  <section class="content-section" aria-labelledby="usecases-heading">
-    <div class="container-narrow">
-      <div class="eyebrow">When to Use This Service</div>
-      <h2 class="section-title" id="usecases-heading">Cases that require an on-site evaluation</h2>
-
-      <ul class="use-cases-list">
-        <li>Construction defect claims — residential, multi-family, or commercial — where the physical condition of the structure needs independent forensic documentation before mediation or trial.</li>
-        <li>Premises liability cases where the hazardous condition needs to be documented before it is remediated, altered, or lost to natural deterioration.</li>
-        <li>Time-sensitive matters where site conditions are at risk of change — construction being completed, repairs being made, or evidence being removed — and rapid inspection is critical.</li>
-        <li>Joint defense inspections where the defense needs its own qualified inspector present alongside plaintiff's expert to observe and document the same conditions simultaneously.</li>
-        <li>HOA and condominium disputes where the alleged construction defects span multiple units or common area components requiring systematic forensic survey.</li>
-        <li>Workplace injury cases where the condition of the worksite, equipment, or facility is central to the liability theory.</li>
-        <li>Environmental matters where on-site sampling, air quality testing, or contamination mapping requires a qualified specialist with both technical expertise and litigation experience.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- RELATED -->
-  <section class="content-section alt" aria-labelledby="related-heading">
-    <div class="container">
-      <div class="eyebrow">Related Services</div>
-      <h2 class="section-title" id="related-heading">Often used alongside site inspections</h2>
-      <p class="section-sub">A site inspection frequently identifies the need for expert testimony or additional evaluation services.</p>
-      <div class="related-grid">
-        <a href="expert-search.html" class="related-card">
-          <div class="related-card-title">Start an Expert Search <span class="related-arrow">→</span></div>
-          <div class="related-card-desc">When the inspection establishes the defect, place a structural engineer, architect, or construction expert to testify to the findings at deposition or trial.</div>
-        </a>
-        <a href="peer-review.html" class="related-card">
-          <div class="related-card-title">Peer Review &amp; Record Analysis <span class="related-arrow">→</span></div>
-          <div class="related-card-desc">For cases where construction records, plans, or prior inspection reports need independent analysis alongside the physical site inspection.</div>
-        </a>
-        <a href="bill-review.html" class="related-card">
-          <div class="related-card-title">Bill Review <span class="related-arrow">→</span></div>
-          <div class="related-card-desc">In cases where remediation or repair costs are disputed, bill review evaluates the reasonableness of the contractor charges forming the damages claim.</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-band" aria-labelledby="cta-heading">
-    <h2 id="cta-heading">Ready to request a site inspection?</h2>
-    <p>Submit your case and site details. Criterion will identify the right inspector and confirm scheduling within 1 business day.</p>
-    <div class="cta-band-btns">
-      <a href="../start-search.html" class="btn btn-arctic">Request an inspection</a>
-      <a href="../services.html"     class="btn btn-outline">View all services</a>
-    </div>
-  </section>
-
 </main>
-
-<!-- FOOTER -->
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <svg width="16" height="22" viewBox="0 0 36 48" fill="none" aria-hidden="true">
-            <polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/>
-            <line x1="30" y1="4"  x2="30" y2="0"  stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
-            <line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/>
-          </svg>
-          <span class="footer-brand-name">CRITERION EXPERT PARTNERS</span>
-        </div>
-        <div class="footer-tagline">The Expert Standard.</div>
-        <div class="footer-loc">Los Angeles, California<br>Serving Litigation Firms Nationwide</div>
-      </div>
-      <div>
-        <div class="footer-col-label">Services</div>
-        <ul class="footer-links">
-          <li><a href="expert-search.html">Start an Expert Search</a></li>
-          <li><a href="peer-review.html">Peer Review &amp; Record Analysis</a></li>
-          <li><a href="ime.html">Independent Medical Examinations</a></li>
-          <li><a href="bill-review.html">Bill Review</a></li>
-          <li><a href="site-inspections.html">Site &amp; Facility Inspections</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-label">Firm</div>
-        <ul class="footer-links">
-          <li><a href="../how-it-works.html">How It Works</a></li>
-          <li><a href="../about.html">About Criterion</a></li>
-          <li><a href="../faq.html">FAQ</a></li>
-          <li><a href="../join-panel.html">Join the Expert Panel</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div><div class="footer-brand"><svg width="16" height="22" viewBox="0 0 36 48" fill="none" aria-hidden="true"><polyline points="30,4 7,4 3,8 3,40 7,44 30,44" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="miter"/><line x1="30" y1="4" x2="30" y2="0" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/><line x1="30" y1="44" x2="30" y2="48" stroke="#38BDF8" stroke-width="2" stroke-linecap="square"/></svg><span class="footer-brand-name">CRITERION EXPERT PARTNERS</span></div><div class="footer-tagline">The Expert Standard.</div><div class="footer-loc">Los Angeles, California<br>Serving Litigation Firms Nationwide</div></div>
+      <div><div class="footer-col-label">Services</div><ul class="footer-links"><li><a href="/services/expert-search.html">Start an Expert Search</a></li><li><a href="/services/peer-review.html">Peer Review &amp; Record Analysis</a></li><li><a href="/services/ime.html">Independent Medical Examinations</a></li><li><a href="/services/bill-review.html">Bill Review</a></li><li><a href="/services/site-inspections.html">Site &amp; Facility Inspections</a></li></ul></div>
+      <div><div class="footer-col-label">Firm</div><ul class="footer-links"><li><a href="/how-it-works.html">How It Works</a></li><li><a href="/about.html">About Criterion</a></li><li><a href="/join-panel.html">Join the Expert Panel</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-legal">
-        <span>&copy; 2026 Criterion Expert Partners. All rights reserved.</span>
-        <a href="../privacy.html">Privacy Policy</a>
-        <a href="../terms.html">Terms of Service</a>
-      </div>
-      <div class="footer-trust-note">All experts background-checked, credential-verified, and confidentiality bound.</div>
-    </div>
+    <div class="footer-bottom"><div class="footer-legal"><span>&copy; 2026 Criterion Expert Partners. All rights reserved.</span><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div><div class="footer-trust-note">All experts background-checked, credential-verified, and confidentiality bound.</div></div>
   </div>
 </footer>
-
 <script>
   const nav = document.getElementById('main-nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
-  const toggle = document.getElementById('nav-toggle');
-  const links  = document.getElementById('nav-links');
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-  });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
-  }));
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && links.classList.contains('open')) {
-      links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.focus();
-    }
-  });
+  const toggle = document.getElementById('nav-toggle'), navLinks = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => { const open = navLinks.classList.toggle('open'); toggle.classList.toggle('open', open); toggle.setAttribute('aria-expanded', String(open)); });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { navLinks.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }));
+  const aboutToggle = document.getElementById('about-toggle'), aboutMenu = document.getElementById('about-menu');
+  if (aboutToggle && aboutMenu) {
+    aboutToggle.addEventListener('click', e => { e.preventDefault(); const isOpen = aboutMenu.classList.toggle('open'); aboutToggle.classList.toggle('open', isOpen); aboutToggle.setAttribute('aria-expanded', String(isOpen)); });
+    document.addEventListener('click', e => { if (!e.target.closest('.nav-dropdown')) { aboutMenu.classList.remove('open'); aboutToggle.classList.remove('open'); aboutToggle.setAttribute('aria-expanded', 'false'); } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && aboutMenu.classList.contains('open')) { aboutMenu.classList.remove('open'); aboutToggle.classList.remove('open'); aboutToggle.setAttribute('aria-expanded', 'false'); } });
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && navLinks.classList.contains('open')) { navLinks.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus(); } });
 </script>
 </body>
 </html>
